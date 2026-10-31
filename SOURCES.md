@@ -17,7 +17,7 @@ Consultado el 30 de octubre de 2026.
 - Licencia de Pexels: https://www.pexels.com/license/
 - Manrope: Google Fonts, licencia SIL Open Font License. Fuente servida localmente.
 - Barlow Condensed (peso 600): Google Fonts, licencia SIL Open Font License. Fuente servida localmente.
-- Logotipo tipográfico y símbolo de movimiento: propuesta visual creada para este sitio, no reproducción de un logo oficial.
+- Marca tipográfica simplificada y favicon con inicial: adaptaciones para esta web, no reproducciones de un archivo vectorial oficial. Se retiraron el símbolo decorativo y la firma simulada de la propuesta anterior.
 
 La redacción es una propuesta comercial original. La información de contacto debe ser validada periódicamente por el negocio.
 

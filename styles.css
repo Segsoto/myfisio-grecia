@@ -17,7 +17,6 @@
   --ink: #0c2b62;
   --ink-raised: #0b508b;
   --accent: #87d9f5;
-  --brand: #06a0e6;
   --brand-detail: #d0db4a;
   --paper: #f5f9fc;
   --mist: #e3f2fa;
@@ -92,7 +91,7 @@ h2 {
 h3 {
   font-weight: 500;
   line-height: 1.12;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.04em;
 }
 p {
   font-size: 14px;
@@ -115,9 +114,9 @@ svg {
 .small-label,
 .eyebrow,
 .section-kicker {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 650;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.04em;
   line-height: 1.6;
 }
 .small-label {
@@ -168,19 +167,14 @@ svg {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 0;
   flex-shrink: 0;
-}
-.brand svg {
-  width: 36px;
-  height: 40px;
-  color: var(--accent);
 }
 .brand > span {
   font-size: 35px;
-  font-weight: 650;
+  font-weight: 400;
   line-height: 1;
-  letter-spacing: -1.8px;
+  letter-spacing: -0.055em;
 }
 .brand-dot {
   color: var(--brand-detail);
@@ -214,19 +208,20 @@ svg {
 }
 .header-booking {
   border-bottom: 1px solid #ffffff80;
-  padding: 8px 0;
+  padding: 12px 20px;
   display: flex;
   gap: 30px;
   align-items: center;
   font-size: 12px;
-}
-.header-booking > span {
-  font-size: 24px;
-  color: var(--accent);
-  line-height: 1;
+  background: var(--accent);
+  color: var(--ink);
+  border: 0;
+  min-height: 44px;
+  font-weight: 600;
 }
 .header-booking:hover {
-  color: var(--accent);
+  color: var(--ink);
+  background: var(--white);
 }
 .menu-toggle {
   display: none;
@@ -247,11 +242,6 @@ svg {
   padding: 18px 0;
   font-size: 24px;
   letter-spacing: -0.04em;
-}
-.mobile-nav > a > span {
-  font-size: 11px;
-  color: var(--accent);
-  letter-spacing: 0;
 }
 /* Immersive opening */
 .hero {
@@ -311,22 +301,14 @@ svg {
   display: flex;
   align-items: center;
   gap: 11px;
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.14em;
   margin-bottom: 36px;
-}
-.live-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-  display: inline-block;
-  flex-shrink: 0;
 }
 .hero-location {
   margin-left: 30px;
   opacity: 0.8;
-  font-size: 8px;
+  font-size: 12px;
 }
 .hero h1 {
   font-size: clamp(6rem, 13.4vw, 13.8rem);
@@ -344,35 +326,24 @@ svg {
   margin-top: 38px;
 }
 .hero-description p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.85;
+  max-width: 36ch;
 }
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  gap: 25px;
-  min-height: 57px;
-  padding: 9px 10px 9px 23px;
+  gap: 0;
+  min-height: 54px;
+  padding: 16px 26px;
   border: 1px solid transparent;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.5;
   transition:
     background 0.2s,
     color 0.2s;
-}
-.button-arrow {
-  width: 37px;
-  height: 37px;
-  display: grid;
-  place-items: center;
-  border: 1px solid currentColor;
-  font-size: 24px;
-  transition: transform 0.25s;
-}
-.button:hover .button-arrow {
-  transform: rotate(45deg);
 }
 .button-accent {
   background: var(--accent);
@@ -388,39 +359,6 @@ svg {
 .button-dark:hover {
   background: var(--ink-raised);
 }
-.hero-seal {
-  position: absolute;
-  right: var(--gutter);
-  top: 55%;
-  width: 145px;
-  height: 145px;
-  border: 1px solid #ffffff80;
-  border-radius: 50%;
-  background: #0c2b62b3;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transform: rotate(9deg);
-  transition:
-    transform 0.3s,
-    background 0.3s;
-}
-.hero-seal > span {
-  font-size: 11px;
-  line-height: 1.3;
-  letter-spacing: 0.05em;
-}
-.hero-seal svg {
-  width: 25px;
-  height: 25px;
-  margin-top: 9px;
-  color: var(--accent);
-}
-.hero-seal:hover {
-  transform: rotate(0);
-  background: var(--ink);
-}
 .hero-bottom {
   position: absolute;
   bottom: 0;
@@ -432,8 +370,8 @@ svg {
   gap: 30px;
   padding-block: 27px;
   border-top: 1px solid #ffffff38;
-  font-size: 8px;
-  letter-spacing: 0.11em;
+  font-size: 12px;
+  letter-spacing: 0;
 }
 .hero-bottom > a {
   display: flex;
@@ -443,23 +381,6 @@ svg {
 .hero-bottom > span {
   color: #e4f0fa;
 }
-.scroll-line {
-  width: 1px;
-  height: 30px;
-  background: #ffffff45;
-  position: relative;
-  overflow: hidden;
-}
-.scroll-line::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--accent);
-  animation: scroll-hint 2.5s ease-in-out infinite;
-}
-.hero-counter {
-  margin-left: 50px;
-}
 /* A typographic statement, then an off-grid photographic story */
 .intro {
   background: var(--mist);
@@ -468,7 +389,7 @@ svg {
 }
 .intro .section-kicker {
   border-bottom: 1px solid var(--border);
-  padding-bottom: 24px;
+  padding-bottom: 20px;
 }
 .intro-statement {
   padding-top: 70px;
@@ -481,27 +402,15 @@ svg {
   font-size: clamp(3.8rem, 7.3vw, 8rem);
   line-height: 0.92;
 }
-.intro-last-line {
-  white-space: nowrap;
-  position: relative;
-}
-.motion-mark {
-  position: absolute;
-  left: calc(100% + 20px);
-  bottom: 3px;
-  width: 85px;
-  height: 72px;
-  color: var(--brand);
-}
 .intro-aside {
   padding: 0 0 5px 50px;
 }
 .intro-aside .small-label {
   max-width: 200px;
-  font-size: 10px;
+  font-size: 12px;
 }
 .intro-aside p {
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 20px;
   max-width: 280px;
 }
@@ -527,58 +436,30 @@ svg {
   height: 100%;
 }
 .collage-main > .image-clip {
-  height: calc(100% - 30px);
+  height: 100%;
 }
 .collage-main img {
   object-position: 53% center;
-}
-.collage-main figcaption {
-  padding-top: 10px;
-  font-size: 8px;
-  letter-spacing: 0.09em;
 }
 .collage-inset {
   position: absolute;
   right: 0;
   bottom: 0;
   width: 42%;
-  height: 330px;
-  transform: rotate(6deg);
+  height: 310px;
+  transform: none;
   border: 8px solid var(--paper);
   background: var(--paper);
-  box-shadow: 0 15px 30px #0c2b6220;
+  box-shadow: none;
 }
 .collage-inset .image-clip {
-  height: calc(100% - 27px);
+  height: 100%;
 }
 .collage-inset img {
   object-position: 25% center;
 }
-.collage-inset figcaption {
-  font-family: var(--display);
-  font-size: 18px;
-  letter-spacing: 0.01em;
-  text-align: center;
-  line-height: 27px;
-}
-.collage-label {
-  position: absolute;
-  right: 2%;
-  top: 11%;
-  background: var(--brand);
-  padding: 22px 28px;
-  transform: rotate(-7deg);
-  font-family: var(--display);
-  font-size: 35px;
-  line-height: 0.95;
-  letter-spacing: -0.01em;
-}
 .story-copy {
   padding-right: 15px;
-}
-.story-copy > .small-label {
-  font-size: 9px;
-  margin-bottom: 25px;
 }
 .story-copy h3 {
   font-size: clamp(2.8rem, 4.3vw, 5rem);
@@ -591,47 +472,24 @@ svg {
 }
 .story-copy > p {
   color: var(--muted);
-  max-width: 390px;
-  font-size: 13px;
+  max-width: 43ch;
+  font-size: 15px;
   margin-top: 18px;
 }
 .underlined-link {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  gap: 28px;
+  gap: 0;
   border-bottom: 1px solid currentColor;
   padding-block: 10px;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.6;
-}
-.underlined-link > span {
-  font-size: 24px;
-  font-weight: 400;
-  transition: transform 0.2s;
-}
-.underlined-link:hover > span {
-  transform: translate(3px, -3px);
+  min-height: 44px;
 }
 .story-copy > .underlined-link {
   margin-top: 22px;
-}
-.story-signoff {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  margin-top: 35px;
-}
-.story-signoff svg {
-  width: 70px;
-  height: 40px;
-  color: var(--muted);
-}
-.story-signoff > span {
-  font-size: 9px;
-  line-height: 1.5;
-  color: var(--muted);
 }
 /* An interactive, photographic service index */
 .care {
@@ -660,8 +518,8 @@ svg {
   color: var(--accent);
 }
 .care-heading > p {
-  font-size: 12px;
-  max-width: 300px;
+  font-size: 14px;
+  max-width: 34ch;
   padding-bottom: 5px;
   line-height: 1.9;
   color: #d9eafa;
@@ -683,27 +541,22 @@ svg {
   display: flex;
   gap: 15px;
   align-items: center;
-  text-align: left;
+  text-align: center;
   min-height: 75px;
-  padding: 17px 18px;
-  font-size: 12px;
+  padding: 18px 14px;
+  font-size: 14px;
   line-height: 1.4;
   position: relative;
+  justify-content: center;
 }
 .care-tab + .care-tab {
-  border-left: 1px solid #ffffff30;
-}
-.care-tab > span:first-child {
-  font-size: 9px;
-  opacity: 0.8;
-}
-.care-tab .tab-arrow {
-  margin-left: auto;
-  font-size: 23px;
+  border-left: 0;
 }
 .care-tab.is-active {
-  background: var(--accent);
-  color: var(--ink);
+  background: #ffffff0d;
+  color: var(--accent);
+  box-shadow: inset 0 -3px 0 var(--accent);
+  font-weight: 700;
 }
 .care-tab:not(.is-active):hover {
   background: #ffffff0d;
@@ -737,25 +590,6 @@ svg {
 .care-image img {
   object-position: 55% 47%;
 }
-.care-image::after {
-  content: "";
-  position: absolute;
-  inset: 60% 0 0;
-  background: linear-gradient(transparent, #061d458c);
-  pointer-events: none;
-}
-.care-image figcaption {
-  position: absolute;
-  bottom: 24px;
-  left: 25px;
-  z-index: 1;
-  color: var(--white);
-  font-size: 8px;
-  letter-spacing: 0.1em;
-  max-width: calc(100% - 50px);
-  padding: 7px 10px;
-  background: #0c2b62eb;
-}
 .care-panel-copy {
   position: relative;
   padding: 50px 45px 38px;
@@ -764,53 +598,35 @@ svg {
   align-items: flex-start;
   overflow: hidden;
 }
-.panel-count {
-  position: absolute;
-  right: 25px;
-  top: 3px;
-  font-family: var(--display);
-  font-size: 160px;
-  line-height: 1;
-  color: #0c2b620b;
-  pointer-events: none;
-}
-.care-panel-copy .small-label {
-  font-size: 8px;
-  position: relative;
-}
 .care-panel-copy h3 {
-  font-size: clamp(2.5rem, 4vw, 4.2rem);
-  letter-spacing: -0.065em;
-  margin-top: 35px;
+  font-size: clamp(2rem, 3.2vw, 3.4rem);
+  letter-spacing: -0.04em;
+  margin-top: 0;
   position: relative;
+  line-height: 1.15;
 }
 .care-panel-copy > p {
-  font-size: 12px;
+  font-size: 15px;
   max-width: 335px;
   color: var(--muted);
   margin-top: 24px;
+  line-height: 1.8;
 }
 .care-panel-copy > .underlined-link {
-  font-size: 11px;
-  margin-top: 20px;
-}
-.panel-footnote {
+  font-size: 14px;
   margin-top: auto;
-  padding-top: 30px;
-  font-size: 7px;
-  letter-spacing: 0.12em;
-  color: var(--muted);
+  padding-top: 28px;
 }
 .care-disclaimer {
-  text-align: right;
+  text-align: left;
   color: #c3d9ec;
-  font-size: 9px;
+  font-size: 12px;
   margin-top: 18px;
 }
 /* Sticky photo chapter: the zoom is tied to progress, never to a timer. */
 .movement-chapter {
-  height: 165svh;
-  min-height: 1050px;
+  height: 135svh;
+  min-height: 860px;
   background: var(--ink);
   position: relative;
 }
@@ -844,48 +660,19 @@ svg {
   padding: 100px var(--gutter) 80px;
   width: 100%;
 }
-.chapter-copy > .small-label {
-  color: var(--accent);
-  font-size: 9px;
-  letter-spacing: 0.16em;
-  margin-bottom: 35px;
-}
 .chapter-copy h2 {
-  font-size: clamp(4.5rem, 9vw, 9.3rem);
-  line-height: 0.87;
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  line-height: 0.98;
 }
 .chapter-copy h2 > span {
   color: var(--accent);
 }
 .chapter-copy p {
-  font-size: 12px;
+  font-size: 15px;
   margin-top: 30px;
   color: #e1eefb;
-}
-.chapter-side {
-  position: absolute;
-  left: 25px;
-  top: 50%;
-  font-size: 8px;
-  letter-spacing: 0.12em;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-}
-.chapter-progress {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: #ffffff20;
-}
-.chapter-progress > span {
-  width: 100%;
-  height: 100%;
-  background: var(--accent);
-  display: block;
-  transform: scaleX(var(--scene-progress, 0));
-  transform-origin: left;
+  max-width: 42ch;
+  margin-inline: auto;
 }
 /* First visit: a bold invitation and a compact guide. */
 .first-visit {
@@ -895,55 +682,18 @@ svg {
   gap: 100px;
   background: var(--paper);
 }
-.visit-title > .small-label {
-  font-size: 9px;
-  margin-bottom: 35px;
-}
 .visit-title h2 {
-  font-size: clamp(4.8rem, 8.5vw, 9.5rem);
-  line-height: 0.88;
+  font-size: clamp(3.2rem, 6.5vw, 7rem);
+  line-height: 0.98;
 }
 .visit-title h2 > span {
   color: var(--muted);
 }
 .visit-title > p {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 30px;
-}
-.round-link {
-  width: 140px;
-  height: 140px;
-  border: 1px solid var(--ink);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-top: 40px;
-  font-size: 9px;
-  letter-spacing: 0.08em;
-  line-height: 1.5;
-  transition:
-    background 0.25s,
-    transform 0.25s;
-}
-.round-link > span:last-child {
-  font-size: 30px;
-  font-weight: 400;
-}
-.round-link:hover {
-  background: var(--accent);
-  transform: rotate(-7deg);
-}
-.guide-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  font-size: 8px;
-  letter-spacing: 0.12em;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 22px;
+  max-width: 34ch;
 }
 .visit-steps {
   margin: 0;
@@ -970,7 +720,7 @@ svg {
   line-height: 1.2;
 }
 .visit-steps p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.9;
   margin-top: 9px;
   color: var(--muted);
@@ -995,20 +745,12 @@ summary::-webkit-details-marker {
   justify-content: space-between;
   gap: 20px;
   padding-block: 16px;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 550;
-  min-height: 54px;
-}
-.visit-faq summary > span {
-  font-size: 23px;
-  transition: transform 0.2s;
-  line-height: 1;
-}
-.visit-faq details[open] summary > span {
-  transform: rotate(45deg);
+  min-height: 64px;
 }
 .visit-faq details > p {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--muted);
   padding: 0 25px 20px 0;
 }
@@ -1016,7 +758,7 @@ summary::-webkit-details-marker {
 .contact {
   display: grid;
   grid-template-columns: 1.65fr 1fr;
-  min-height: 650px;
+  min-height: 550px;
 }
 .contact-main {
   background: var(--accent);
@@ -1029,16 +771,11 @@ summary::-webkit-details-marker {
   gap: 30px;
 }
 .contact-topline .small-label {
-  font-size: 9px;
-}
-.contact-spark {
-  font-size: 60px;
-  line-height: 1;
-  font-weight: 400;
+  font-size: 12px;
 }
 .contact h2 {
-  font-size: clamp(6rem, 11.5vw, 13rem);
-  line-height: 0.85;
+  font-size: clamp(5rem, 9vw, 10rem);
+  line-height: 0.98;
   margin-top: 25px;
 }
 .contact h2 > span {
@@ -1047,15 +784,17 @@ summary::-webkit-details-marker {
 .contact-action {
   margin-top: 45px;
   display: flex;
-  align-items: center;
-  gap: 27px;
+  align-items: flex-start;
+  gap: 18px;
+  flex-direction: column;
 }
 .contact-action .button {
-  font-size: 11px;
+  font-size: 12px;
 }
 .contact-action > p {
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.8;
+  max-width: 37ch;
 }
 .contact-location {
   background: var(--ink-raised);
@@ -1065,18 +804,11 @@ summary::-webkit-details-marker {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .contact-location > .small-label {
-  font-size: 8px;
+  font-size: 12px;
   color: var(--accent);
-}
-.location-art {
-  width: 100%;
-  height: 200px;
-  margin: 20px 0 30px;
-  color: #9bc8e9;
-  opacity: 0.8;
-  overflow: visible;
 }
 .contact-location h3 {
   font-size: 34px;
@@ -1084,25 +816,25 @@ summary::-webkit-details-marker {
   margin-bottom: 15px;
 }
 .contact-location p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
   color: #d9eafa;
 }
 .contact-location .underlined-link {
-  font-size: 10px;
+  font-size: 14px;
   margin-top: 15px;
   color: var(--accent);
 }
 .location-phone {
   padding-top: 27px;
   border-top: 1px solid #ffffff30;
-  margin-top: auto;
+  margin-top: 36px;
   display: flex;
   flex-direction: column;
   gap: 9px;
 }
 .location-phone > span {
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.12em;
 }
 .location-phone > a {
@@ -1124,11 +856,11 @@ summary::-webkit-details-marker {
 }
 .footer-main > p {
   color: #c2d8ec;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.75;
 }
 .footer-instagram {
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   line-height: 1.8;
 }
@@ -1143,8 +875,8 @@ summary::-webkit-details-marker {
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  font-size: 8px;
-  letter-spacing: 0.08em;
+  font-size: 12px;
+  letter-spacing: 0;
   padding-block: 20px;
   color: #c2d8ec;
 }
@@ -1152,11 +884,11 @@ summary::-webkit-details-marker {
   background: none;
   border: 0;
   padding: 10px 0;
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0;
 }
 .footer-bottom > a {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0;
   color: var(--paper);
 }
@@ -1210,18 +942,6 @@ summary::-webkit-details-marker {
   margin-top: 25px;
   gap: 40px;
 }
-.privacy-dialog .button > span {
-  font-size: 22px;
-}
-@keyframes scroll-hint {
-  0% {
-    transform: translateY(-100%);
-  }
-  60%,
-  100% {
-    transform: translateY(100%);
-  }
-}
 @keyframes header-enter {
   from {
     transform: translateY(-100%);
@@ -1256,7 +976,7 @@ summary::-webkit-details-marker {
   }
   .story-copy > p {
     max-width: 480px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .care-panel,
   .care-image {
@@ -1289,11 +1009,6 @@ summary::-webkit-details-marker {
   .hero h1 {
     font-size: 14vw;
   }
-  .hero-seal {
-    width: 120px;
-    height: 120px;
-    top: 57%;
-  }
   .hero-description {
     gap: 30px;
   }
@@ -1306,11 +1021,6 @@ summary::-webkit-details-marker {
   }
   .intro-aside {
     padding-left: 40px;
-  }
-  .motion-mark {
-    width: 65px;
-    height: 55px;
-    left: calc(100% + 12px);
   }
   .clinic-story {
     gap: 60px;
@@ -1332,7 +1042,7 @@ summary::-webkit-details-marker {
   .care-tab {
     padding-inline: 13px;
     gap: 10px;
-    font-size: 11px;
+    font-size: 12px;
   }
   .care-panel-copy {
     padding: 40px 30px 30px;
@@ -1363,9 +1073,6 @@ summary::-webkit-details-marker {
   .contact-location {
     padding-left: 35px;
   }
-  .location-art {
-    height: 180px;
-  }
 }
 @media (max-width: 900px) {
   :root {
@@ -1373,16 +1080,13 @@ summary::-webkit-details-marker {
   }
   .desktop-nav {
     gap: 22px;
-    font-size: 11px;
+    font-size: 12px;
   }
   .brand > span {
     font-size: 31px;
   }
-  .brand svg {
-    width: 31px;
-  }
   .header-booking {
-    font-size: 11px;
+    font-size: 12px;
     gap: 20px;
   }
   .hero {
@@ -1396,29 +1100,18 @@ summary::-webkit-details-marker {
     padding-top: 130px;
   }
   .hero-eyebrow {
-    font-size: 8px;
+    font-size: 12px;
   }
   .hero-location {
-    font-size: 7px;
+    font-size: 12px;
   }
   .hero-description {
     flex-direction: column;
     align-items: flex-start;
     gap: 25px;
   }
-  .hero-seal {
-    top: 61%;
-    width: 110px;
-    height: 110px;
-  }
-  .hero-seal > span {
-    font-size: 9px;
-  }
   .hero-bottom {
-    font-size: 7px;
-  }
-  .hero-counter {
-    margin-left: 0;
+    font-size: 12px;
   }
   .intro-statement {
     grid-template-columns: 1fr;
@@ -1427,11 +1120,6 @@ summary::-webkit-details-marker {
   }
   .intro-statement h2 {
     font-size: 11vw;
-  }
-  .motion-mark {
-    width: 85px;
-    height: 70px;
-    left: calc(100% + 30px);
   }
   .intro-aside {
     padding-left: 0;
@@ -1445,7 +1133,7 @@ summary::-webkit-details-marker {
   }
   .intro-aside .small-label {
     max-width: 180px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .clinic-story {
     grid-template-columns: 1.1fr 1fr;
@@ -1463,34 +1151,22 @@ summary::-webkit-details-marker {
     width: 54%;
     height: 245px;
   }
-  .collage-label {
-    right: -5px;
-    padding: 17px;
-    font-size: 30px;
-  }
   .story-copy h3 {
     font-size: 39px;
     margin-bottom: 23px;
   }
   .story-copy > p {
-    font-size: 12px;
-  }
-  .story-copy > .small-label {
-    font-size: 8px;
-    margin-bottom: 18px;
+    font-size: 14px;
   }
   .story-copy > .underlined-link {
-    font-size: 10px;
+    font-size: 14px;
     gap: 15px;
-  }
-  .story-signoff {
-    margin-top: 20px;
   }
   .care-heading h2 {
     font-size: 11vw;
   }
   .care-heading > p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .care-tabs {
     grid-template-columns: repeat(2, 1fr);
@@ -1522,19 +1198,11 @@ summary::-webkit-details-marker {
     margin-top: 28px;
   }
   .care-panel-copy > p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .care-panel-copy > .underlined-link {
-    font-size: 10px;
+    font-size: 14px;
     gap: 15px;
-  }
-  .panel-footnote {
-    font-size: 6px;
-  }
-  .care-image figcaption {
-    font-size: 6px;
-    left: 18px;
-    bottom: 20px;
   }
   .movement-chapter {
     height: 150svh;
@@ -1544,7 +1212,7 @@ summary::-webkit-details-marker {
     min-height: 600px;
   }
   .chapter-copy h2 {
-    font-size: 12vw;
+    font-size: clamp(2.8rem, 10vw, 5.8rem);
   }
   .first-visit {
     gap: 40px;
@@ -1552,7 +1220,7 @@ summary::-webkit-details-marker {
     grid-template-columns: 1fr 1.1fr;
   }
   .visit-title h2 {
-    font-size: 11vw;
+    font-size: clamp(2.7rem, 12.6vw, 5rem);
   }
   .visit-steps li {
     gap: 17px;
@@ -1561,23 +1229,23 @@ summary::-webkit-details-marker {
     font-size: 21px;
   }
   .visit-steps p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .step-number {
     font-size: 40px;
     width: 35px;
   }
   .visit-title > p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .visit-faq summary {
-    font-size: 10px;
+    font-size: 14px;
   }
   .contact-main {
     padding-right: 35px;
   }
   .contact h2 {
-    font-size: 14vw;
+    font-size: clamp(4.25rem, 18vw, 8rem);
   }
   .contact {
     grid-template-columns: 1.2fr 1fr;
@@ -1587,21 +1255,18 @@ summary::-webkit-details-marker {
     padding-left: 28px;
   }
   .contact-action .button {
-    font-size: 10px;
-    padding-left: 17px;
+    font-size: 14px;
+    padding-left: 22px;
     gap: 17px;
   }
   .contact-topline {
     gap: 15px;
   }
-  .contact-spark {
-    font-size: 48px;
-  }
   .contact-topline .small-label {
-    font-size: 8px;
+    font-size: 12px;
   }
   .contact-location > .small-label {
-    font-size: 7px;
+    font-size: 12px;
   }
   .contact-location h3 {
     font-size: 30px;
@@ -1613,13 +1278,13 @@ summary::-webkit-details-marker {
     gap: 30px;
   }
   .footer-main > p {
-    font-size: 10px;
+    font-size: 12px;
   }
   .footer-instagram > span {
     font-size: 12px;
   }
   .footer-bottom {
-    font-size: 7px;
+    font-size: 12px;
     gap: 20px;
   }
 }
@@ -1664,24 +1329,18 @@ summary::-webkit-details-marker {
     display: none;
   }
   .brand > span {
-    font-size: 30px;
-  }
-  .brand svg {
-    width: 29px;
-    height: 35px;
+    font-size: 26px;
   }
   .brand {
     gap: 7px;
   }
   .header-actions {
-    gap: 18px;
+    gap: 10px;
   }
   .header-booking {
-    font-size: 10px;
+    font-size: 12px;
     gap: 14px;
-  }
-  .header-booking > span {
-    font-size: 21px;
+    padding: 10px 12px;
   }
   .menu-toggle {
     display: flex;
@@ -1729,7 +1388,7 @@ summary::-webkit-details-marker {
     padding-bottom: 160px;
   }
   .hero-eyebrow {
-    font-size: 7px;
+    font-size: 12px;
     margin-bottom: 30px;
     gap: 8px;
     letter-spacing: 0.1em;
@@ -1746,49 +1405,27 @@ summary::-webkit-details-marker {
     gap: 24px;
   }
   .hero-description p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .button {
-    font-size: 11px;
+    font-size: 12px;
     min-height: 55px;
     padding-left: 19px;
   }
-  .hero-seal {
-    top: auto;
-    bottom: 112px;
-    right: 25px;
-    width: 90px;
-    height: 90px;
-    transform: rotate(9deg);
-  }
-  .hero-seal > span {
-    font-size: 8px;
-  }
-  .hero-seal svg {
-    width: 17px;
-    height: 17px;
-    margin-top: 5px;
-  }
   .hero-bottom {
     padding-block: 20px;
-    font-size: 6px;
+    font-size: 12px;
     letter-spacing: 0.08em;
     gap: 20px;
   }
-  .hero-bottom > span:not(.hero-counter) {
-    display: none;
-  }
   .hero-bottom > a {
     gap: 10px;
-  }
-  .scroll-line {
-    height: 23px;
   }
   .intro {
     padding-bottom: 65px;
   }
   .section-kicker {
-    font-size: 7px;
+    font-size: 12px;
     padding-top: 24px;
     gap: 20px;
   }
@@ -1807,18 +1444,12 @@ summary::-webkit-details-marker {
     font-size: clamp(2.65rem, 12.9vw, 5.2rem);
     line-height: 0.95;
   }
-  .motion-mark {
-    width: 48px;
-    height: 47px;
-    left: calc(100% + 15px);
-    bottom: 0;
-  }
   .intro-aside {
     flex-direction: column;
     gap: 13px;
   }
   .intro-aside .small-label {
-    font-size: 8px;
+    font-size: 12px;
     max-width: 100%;
   }
   .intro-aside p {
@@ -1845,41 +1476,22 @@ summary::-webkit-details-marker {
     right: 9px;
     border-width: 6px;
   }
-  .collage-label {
-    right: 10px;
-    top: 12%;
-    font-size: 30px;
-    padding: 18px 22px;
-  }
-  .collage-main figcaption {
-    font-size: 7px;
-  }
-  .collage-inset figcaption {
-    font-size: 15px;
-  }
   .story-copy {
     padding-right: 0;
     max-width: 470px;
-  }
-  .story-copy > .small-label {
-    font-size: 8px;
-    margin-bottom: 20px;
   }
   .story-copy h3 {
     font-size: 47px;
     margin-bottom: 25px;
   }
   .story-copy > p {
-    font-size: 13px;
+    font-size: 14px;
     max-width: 100%;
     margin-top: 15px;
   }
   .story-copy > .underlined-link {
-    font-size: 11px;
+    font-size: 14px;
     margin-top: 20px;
-  }
-  .story-signoff {
-    margin-top: 25px;
   }
   .care {
     padding-bottom: 30px;
@@ -1888,39 +1500,30 @@ summary::-webkit-details-marker {
     padding-bottom: 20px;
   }
   .care .section-kicker > span:last-child {
-    font-size: 6px;
+    font-size: 12px;
   }
   .care-heading {
     display: block;
     padding-block: 40px 30px;
   }
   .care-heading h2 {
-    font-size: clamp(4rem, 15.6vw, 6rem);
+    font-size: clamp(2.8rem, 11.6vw, 4.8rem);
     line-height: 0.9;
   }
   .care-heading > p {
-    font-size: 11px;
+    font-size: 14px;
     max-width: 310px;
     padding: 0;
     margin-top: 25px;
-  }
-  .care-heading > p br {
-    display: none;
   }
   .care-tabs {
     margin-bottom: 16px;
   }
   .care-tab {
-    font-size: 10px;
+    font-size: 12px;
     gap: 10px;
     padding: 15px 12px;
     min-height: 62px;
-  }
-  .care-tab > span:first-child {
-    font-size: 8px;
-  }
-  .care-tab .tab-arrow {
-    font-size: 20px;
   }
   .care-panel {
     grid-template-columns: 1fr;
@@ -1933,42 +1536,26 @@ summary::-webkit-details-marker {
   .care-image img {
     object-position: 55% center;
   }
-  .care-image figcaption {
-    font-size: 6px;
-    left: 18px;
-    bottom: 18px;
-  }
   .care-panel-copy {
     padding: 30px 25px;
     min-height: 375px;
   }
   .care-panel-copy h3 {
-    font-size: 48px;
-    margin-top: 27px;
+    font-size: clamp(1.75rem, 7.8vw, 2.6rem);
+    margin-top: 0;
   }
   .care-panel-copy > p {
-    font-size: 12px;
+    font-size: 14px;
     max-width: 100%;
     margin-top: 22px;
   }
   .care-panel-copy > .underlined-link {
-    font-size: 11px;
+    font-size: 14px;
     margin-top: 20px;
     gap: 30px;
   }
-  .care-panel-copy .small-label {
-    font-size: 7px;
-  }
-  .panel-count {
-    font-size: 155px;
-    right: 20px;
-  }
-  .panel-footnote {
-    font-size: 7px;
-    padding-top: 27px;
-  }
   .care-disclaimer {
-    font-size: 8px;
+    font-size: 12px;
     line-height: 1.7;
     text-align: left;
     margin-top: 16px;
@@ -1987,52 +1574,26 @@ summary::-webkit-details-marker {
   .chapter-copy {
     padding: 85px 22px 75px;
   }
-  .chapter-copy > .small-label {
-    font-size: 7px;
-    margin-bottom: 30px;
-  }
   .chapter-copy h2 {
-    font-size: clamp(3.5rem, 14.8vw, 5.8rem);
+    font-size: clamp(2.8rem, 10vw, 5.8rem);
     line-height: 0.9;
   }
   .chapter-copy p {
-    font-size: 11px;
+    font-size: 14px;
     margin-top: 30px;
     line-height: 1.9;
-  }
-  .chapter-side {
-    font-size: 6px;
-    left: 9px;
   }
   .first-visit {
     grid-template-columns: 1fr;
     gap: 45px;
     padding-block: 60px;
   }
-  .visit-title > .small-label {
-    font-size: 8px;
-    margin-bottom: 25px;
-  }
   .visit-title h2 {
-    font-size: clamp(4.5rem, 19vw, 7rem);
+    font-size: clamp(2.7rem, 12.6vw, 5rem);
   }
   .visit-title > p {
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 25px;
-  }
-  .round-link {
-    width: 110px;
-    height: 110px;
-    gap: 12px;
-    margin-top: 25px;
-    font-size: 8px;
-  }
-  .round-link > span:last-child {
-    font-size: 26px;
-  }
-  .guide-header {
-    font-size: 7px;
-    padding-bottom: 18px;
   }
   .visit-steps li {
     gap: 20px;
@@ -2046,7 +1607,7 @@ summary::-webkit-details-marker {
     font-size: 23px;
   }
   .visit-steps p {
-    font-size: 12px;
+    font-size: 14px;
     max-width: 100%;
     line-height: 1.9;
   }
@@ -2054,11 +1615,11 @@ summary::-webkit-details-marker {
     margin-top: 20px;
   }
   .visit-faq summary {
-    font-size: 11px;
+    font-size: 14px;
     padding-block: 18px;
   }
   .visit-faq details > p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .contact {
     grid-template-columns: 1fr;
@@ -2066,11 +1627,8 @@ summary::-webkit-details-marker {
   .contact-main {
     padding: 25px 22px 40px;
   }
-  .contact-spark {
-    font-size: 45px;
-  }
   .contact h2 {
-    font-size: clamp(6rem, 27vw, 10rem);
+    font-size: clamp(4.25rem, 18vw, 8rem);
     margin-top: 20px;
   }
   .contact-action {
@@ -2079,48 +1637,39 @@ summary::-webkit-details-marker {
     margin-top: 30px;
   }
   .contact-action .button {
-    font-size: 11px;
+    font-size: 14px;
     gap: 25px;
-    padding-left: 20px;
+    padding-left: 22px;
   }
   .contact-action > p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .contact-location {
     padding: 30px 22px;
     min-height: 470px;
   }
   .contact-location > .small-label {
-    font-size: 8px;
-  }
-  .location-art {
-    height: 140px;
-    width: 230px;
-    position: absolute;
-    right: -8px;
-    top: 15px;
-    opacity: 0.45;
-    transform: rotate(-15deg);
+    font-size: 12px;
   }
   .contact-location > div:not(.location-phone) {
-    margin-top: 100px;
+    margin-top: 30px;
     position: relative;
   }
   .contact-location h3 {
     font-size: 35px;
   }
   .contact-location p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .contact-location .underlined-link {
-    font-size: 11px;
+    font-size: 14px;
   }
   .location-phone {
     margin-top: 28px;
     padding-top: 20px;
   }
   .location-phone > span {
-    font-size: 7px;
+    font-size: 12px;
   }
   .location-phone > a {
     font-size: 20px;
@@ -2137,18 +1686,18 @@ summary::-webkit-details-marker {
     font-size: 34px;
   }
   .footer-main > p {
-    font-size: 10px;
+    font-size: 12px;
     max-width: 160px;
   }
   .footer-instagram {
     margin-left: auto;
-    font-size: 6px;
+    font-size: 12px;
   }
   .footer-instagram > span {
     font-size: 12px;
   }
   .footer-bottom {
-    font-size: 6px;
+    font-size: 12px;
     gap: 15px;
     flex-wrap: wrap;
     padding-block: 16px;
@@ -2158,7 +1707,7 @@ summary::-webkit-details-marker {
   }
   .footer-bottom > button,
   .footer-bottom > a {
-    font-size: 8px;
+    font-size: 12px;
   }
   .privacy-dialog {
     padding: 23px;
@@ -2176,7 +1725,8 @@ summary::-webkit-details-marker {
   }
   .header-booking {
     gap: 8px;
-    font-size: 9px;
+    font-size: 12px;
+    padding: 10px 12px;
   }
   .hero-content {
     padding-top: 150px;
@@ -2185,22 +1735,10 @@ summary::-webkit-details-marker {
     font-size: 22vw;
   }
   .hero-description p {
-    font-size: 11px;
-  }
-  .hero-seal {
-    width: 75px;
-    height: 75px;
-    right: 20px;
-  }
-  .hero-seal > span {
-    font-size: 7px;
-  }
-  .motion-mark {
-    width: 35px;
-    left: calc(100% + 8px);
+    font-size: 14px;
   }
   .care-tab {
-    font-size: 9px;
+    font-size: 12px;
     padding-inline: 9px;
     gap: 7px;
   }
@@ -2211,7 +1749,7 @@ summary::-webkit-details-marker {
     height: 220px;
   }
   .care-panel-copy h3 {
-    font-size: 43px;
+    font-size: clamp(1.75rem, 7.8vw, 2.6rem);
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2236,7 +1774,54 @@ summary::-webkit-details-marker {
     height: auto;
     min-height: 640px;
   }
-  .chapter-progress {
-    display: none;
+}
+/* Functional disclosure and close controls. */
+.disclosure-icon {
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  margin: 0 4px 4px 12px;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.visit-faq details[open] .disclosure-icon {
+  transform: rotate(225deg);
+}
+.dialog-close {
+  display: grid;
+  place-items: center;
+}
+.close-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+.close-icon::before,
+.close-icon::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 1.5px;
+  top: 8px;
+  left: 0;
+  background: currentColor;
+  transform: rotate(45deg);
+}
+.close-icon::after {
+  transform: rotate(-45deg);
+}
+.visit-title > .underlined-link {
+  margin-top: 24px;
+}
+@media (max-width: 650px) {
+  .site-header {
+    gap: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .disclosure-icon {
+    transition: none;
   }
 }

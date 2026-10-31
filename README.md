@@ -16,6 +16,8 @@ Servir esta carpeta con cualquier servidor estático. Por ejemplo, `npx serve .`
 
 Los enlaces de WhatsApp abren una conversación con texto preparado; el visitante decide si lo envía. La web no confirma citas ni almacena datos personales. La disponibilidad se coordina directamente con la clínica.
 
+La interfaz prioriza los nombres de los servicios, la información de la primera consulta y una acción de contacto consistente. No incluye emojis, numeraciones decorativas, sellos, firmas simuladas ni símbolos Unicode como iconos. Los controles de apertura y cierre utilizan formas CSS con nombres accesibles.
+
 ## Movimiento y accesibilidad
 
 El hero, el collage y las imágenes de servicios aumentan de escala con el scroll. Una escena fotográfica permanece en pantalla mientras avanza su zoom. El desplazamiento sigue siendo nativo; no se secuestra la rueda ni el gesto táctil.

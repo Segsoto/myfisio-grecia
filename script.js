@@ -104,7 +104,6 @@ function initScrollPhotography() {
     .map((element) => ({
       element,
       image: element.querySelector("[data-scroll-image]"),
-      progress: element.querySelector("[data-scene-progress]"),
       zoom: Number(element.dataset.zoom) || 0.12,
       travel: Number(element.dataset.travel) || 0,
       sticky: element.hasAttribute("data-sticky-scene"),
@@ -137,11 +136,6 @@ function initScrollPhotography() {
         "--image-y",
         `${(progress * scene.travel).toFixed(3)}%`,
       );
-      if (scene.progress)
-        scene.progress.style.setProperty(
-          "--scene-progress",
-          progress.toFixed(4),
-        );
     });
   }
   function schedule() {
@@ -167,10 +161,9 @@ function initScrollPhotography() {
     if (preference.matches) {
       if (frame) cancelAnimationFrame(frame);
       frame = 0;
-      scenes.forEach(({ image, progress }) => {
+      scenes.forEach(({ image }) => {
         image.style.removeProperty("--image-scale");
         image.style.removeProperty("--image-y");
-        progress?.style.removeProperty("--scene-progress");
       });
     } else measure();
   });
