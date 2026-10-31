@@ -52,7 +52,11 @@
           "addressRegion": "Alajuela",
           "addressCountry": "CR"
         },
-        "sameAs": ["https://www.instagram.com/myfisio_grecia/"]
+        "sameAs": [
+          "https://www.instagram.com/myfisio_grecia/",
+          "https://www.facebook.com/MyfisioFisioterapiaRehabilitacion/"
+        ],
+        "logo": "https://myfisio-grecia.vercel.app/assets/myfisio-logo.jpg"
       }
     </script>
   </head>
@@ -60,8 +64,14 @@
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header" data-header="">
       <a class="brand" href="#inicio" aria-label="MyFisio, inicio"
-        ><span>MYFISIO<span class="brand-dot">.</span></span></a
-      >
+        ><img
+          class="brand-image"
+          src="assets/myfisio-logo.jpg"
+          width="720"
+          height="720"
+          alt="MyFisio, Clínica de Fisioterapia y Rehabilitación"
+          decoding="async"
+      /></a>
       <nav class="desktop-nav" aria-label="Navegación principal">
         <a href="#esencia">La clínica</a><a href="#servicios">Servicios</a
         ><a href="#primera-visita">Primera consulta</a>
@@ -553,16 +563,45 @@
     <footer class="site-footer page-shell">
       <div class="footer-main">
         <a class="brand" href="#inicio" aria-label="MyFisio, volver al inicio"
-          ><span>MYFISIO<span class="brand-dot">.</span></span></a
-        >
+          ><img
+            class="brand-image"
+            src="assets/myfisio-logo.jpg"
+            width="720"
+            height="720"
+            alt="MyFisio, Clínica de Fisioterapia y Rehabilitación"
+            decoding="async"
+        /></a>
         <p>Clínica de fisioterapia<br />y rehabilitación en Grecia.</p>
-        <a
-          class="footer-instagram"
-          href="https://www.instagram.com/myfisio_grecia/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Instagram<span>@myfisio_grecia</span></a
-        >
+        <nav class="footer-socials" aria-label="Redes sociales de MyFisio">
+          <span class="footer-socials-label">Redes sociales</span>
+          <div class="footer-social-links">
+            <a
+              class="social-link"
+              href="https://www.instagram.com/myfisio_grecia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                src="assets/icons/instagram.svg"
+                width="20"
+                height="20"
+                alt=""
+                aria-hidden="true"
+              /><span>Instagram</span></a
+            ><a
+              class="social-link"
+              href="https://www.facebook.com/MyfisioFisioterapiaRehabilitacion/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                src="assets/icons/facebook.svg"
+                width="20"
+                height="20"
+                alt=""
+                aria-hidden="true"
+              /><span>Facebook</span></a
+            >
+          </div>
+        </nav>
       </div>
       <div class="footer-bottom">
         <span>© <span id="year">2026</span> MYFISIO GRECIA</span
@@ -571,6 +610,22 @@
         ><a href="#inicio">Volver al inicio</a>
       </div>
     </footer>
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20quisiera%20consultar%20disponibilidad%20para%20una%20cita."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Escribinos por WhatsApp para consultar una cita"
+      ><img
+        src="assets/icons/whatsapp.svg"
+        width="28"
+        height="28"
+        alt=""
+        aria-hidden="true"
+      /><span class="whatsapp-float-label" aria-hidden="true"
+        >Consultá por WhatsApp</span
+      ></a
+    >
     <dialog class="privacy-dialog" aria-labelledby="privacy-title">
       <div class="dialog-header">
         <span class="small-label">MYFISIO GRECIA</span
@@ -589,10 +644,10 @@
         sirven desde este mismo sitio.
       </p>
       <p>
-        Los enlaces de contacto te llevan a WhatsApp, Instagram o Google Maps,
-        que cuentan con sus propias políticas de privacidad. Si elegís
-        escribirnos, compartí únicamente la información necesaria para coordinar
-        tu consulta.
+        Los enlaces de contacto te llevan a WhatsApp, Instagram, Facebook o
+        Google Maps, que cuentan con sus propias políticas de privacidad. Si
+        elegís escribirnos, compartí únicamente la información necesaria para
+        coordinar tu consulta.
       </p>
       <p>
         Para consultas sobre el manejo de tus datos por la clínica, contactá al

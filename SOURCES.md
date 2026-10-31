@@ -17,7 +17,10 @@ Consultado el 30 de octubre de 2026.
 - Licencia de Pexels: https://www.pexels.com/license/
 - Manrope: Google Fonts, licencia SIL Open Font License. Fuente servida localmente.
 - Barlow Condensed (peso 600): Google Fonts, licencia SIL Open Font License. Fuente servida localmente.
-- Marca tipográfica simplificada y favicon con inicial: adaptaciones para esta web, no reproducciones de un archivo vectorial oficial. Se retiraron el símbolo decorativo y la firma simulada de la propuesta anterior.
+- Logo del negocio: se verificó la imagen de perfil de https://www.instagram.com/myfisio_grecia/ y se obtuvo el mismo diseño a 720 × 720 px desde los metadatos públicos del Facebook oficial https://www.facebook.com/MyfisioFisioterapiaRehabilitacion/. Se sirve localmente como `assets/myfisio-logo.jpg`, sin redibujarlo ni alterar el archivo; CSS encuadra la marca en header y footer.
+- Facebook oficial: enlazado desde https://myfisio.wixsite.com/fisioterapia y corroborado por nombre y ubicación en sus metadatos públicos.
+- Logos de Instagram, Facebook y WhatsApp: SVG de Simple Icons, https://github.com/simple-icons/simple-icons/tree/develop/icons, con licencia CC0 incluida en `assets/icons/LICENSE.txt`. Se utilizan como iconos de enlace, no como emojis.
+- Favicon con inicial: adaptación para esta web. Se retiraron el símbolo decorativo y la firma simulada de la propuesta anterior.
 
 La redacción es una propuesta comercial original. La información de contacto debe ser validada periódicamente por el negocio.
 

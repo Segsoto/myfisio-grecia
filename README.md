@@ -18,6 +18,8 @@ Los enlaces de WhatsApp abren una conversación con texto preparado; el visitant
 
 La interfaz prioriza los nombres de los servicios, la información de la primera consulta y una acción de contacto consistente. No incluye emojis, numeraciones decorativas, sellos, firmas simuladas ni símbolos Unicode como iconos. Los controles de apertura y cierre utilizan formas CSS con nombres accesibles.
 
+El header y el footer incorporan el logo real del negocio, servido localmente. El footer enlaza los perfiles verificados de Instagram y Facebook mediante sus logos SVG. El botón flotante de WhatsApp abre la conversación con la clínica; respeta las áreas seguras del móvil y se oculta al abrir el menú o el diálogo de privacidad.
+
 ## Movimiento y accesibilidad
 
 El hero, el collage y las imágenes de servicios aumentan de escala con el scroll. Una escena fotográfica permanece en pantalla mientras avanza su zoom. El desplazamiento sigue siendo nativo; no se secuestra la rueda ni el gesto táctil.
