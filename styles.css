@@ -14,14 +14,16 @@
   font-display: swap;
 }
 :root {
-  --forest: #142e28;
-  --forest-light: #244337;
-  --lime: #d2ed4e;
-  --paper: #f3f0e8;
-  --sage: #dce5d7;
-  --muted: #4f6255;
-  --border: #bac6b7;
-  --white: #fffef7;
+  --ink: #0c2b62;
+  --ink-raised: #0b508b;
+  --accent: #87d9f5;
+  --brand: #06a0e6;
+  --brand-detail: #d0db4a;
+  --paper: #f5f9fc;
+  --mist: #e3f2fa;
+  --muted: #496579;
+  --border: #bfd3e0;
+  --white: #ffffff;
   --gutter: clamp(22px, 5.2vw, 88px);
   --display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
   --body: Manrope, Arial, sans-serif;
@@ -38,7 +40,7 @@ html {
 body {
   margin: 0;
   background: var(--paper);
-  color: var(--forest);
+  color: var(--ink);
   font-family: var(--body);
   font-size: 15px;
   line-height: 1.75;
@@ -70,8 +72,8 @@ summary:focus-visible {
   outline-offset: 6px;
 }
 ::selection {
-  background: var(--lime);
-  color: var(--forest);
+  background: var(--accent);
+  color: var(--ink);
 }
 h1,
 h2,
@@ -132,8 +134,8 @@ svg {
   left: 20px;
   top: -100px;
   z-index: 100;
-  background: var(--lime);
-  color: var(--forest);
+  background: var(--accent);
+  color: var(--ink);
   padding: 12px 20px;
 }
 .skip-link:focus {
@@ -152,14 +154,14 @@ svg {
   padding-inline: var(--gutter);
   color: var(--white);
   border-bottom: 1px solid #ffffff38;
-  background: #10291f80;
+  background: #061d4580;
   transition:
     background 0.3s,
     box-shadow 0.3s;
 }
 .site-header.is-scrolled {
   position: fixed;
-  background: var(--forest);
+  background: var(--ink);
   box-shadow: 0 4px 20px #00000015;
   animation: header-enter 0.3s var(--ease);
 }
@@ -172,7 +174,7 @@ svg {
 .brand svg {
   width: 36px;
   height: 40px;
-  color: var(--lime);
+  color: var(--accent);
 }
 .brand > span {
   font-size: 35px;
@@ -181,7 +183,7 @@ svg {
   letter-spacing: -1.8px;
 }
 .brand-dot {
-  color: var(--lime);
+  color: var(--brand-detail);
 }
 .desktop-nav {
   display: flex;
@@ -197,7 +199,7 @@ svg {
   position: absolute;
   inset: auto 0 1px;
   height: 1px;
-  background: var(--lime);
+  background: var(--accent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.25s;
@@ -220,11 +222,11 @@ svg {
 }
 .header-booking > span {
   font-size: 24px;
-  color: var(--lime);
+  color: var(--accent);
   line-height: 1;
 }
 .header-booking:hover {
-  color: var(--lime);
+  color: var(--accent);
 }
 .menu-toggle {
   display: none;
@@ -233,7 +235,7 @@ svg {
   position: absolute;
   top: 100%;
   inset-inline: 0;
-  background: var(--forest);
+  background: var(--ink);
   padding: 20px var(--gutter) 35px;
   border-bottom: 1px solid #ffffff30;
 }
@@ -248,7 +250,7 @@ svg {
 }
 .mobile-nav > a > span {
   font-size: 11px;
-  color: var(--lime);
+  color: var(--accent);
   letter-spacing: 0;
 }
 /* Immersive opening */
@@ -261,7 +263,7 @@ svg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: var(--forest);
+  background: var(--ink);
   color: var(--white);
   overflow: hidden;
 }
@@ -292,12 +294,12 @@ svg {
   background:
     linear-gradient(
       90deg,
-      #10291fee 0%,
-      #10291fc7 30%,
-      #10291f4a 66%,
-      #10291f33
+      #061d45ee 0%,
+      #061d45c7 30%,
+      #061d454a 66%,
+      #061d4533
     ),
-    linear-gradient(0deg, #10291fbe, transparent 35%, #10291f30);
+    linear-gradient(0deg, #061d45be, transparent 35%, #061d4530);
 }
 .hero-content {
   padding-top: 105px;
@@ -317,7 +319,7 @@ svg {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--lime);
+  background: var(--accent);
   display: inline-block;
   flex-shrink: 0;
 }
@@ -333,7 +335,7 @@ svg {
   max-width: 1000px;
 }
 .hero h1 > span {
-  color: var(--lime);
+  color: var(--accent);
 }
 .hero-description {
   display: flex;
@@ -372,19 +374,19 @@ svg {
 .button:hover .button-arrow {
   transform: rotate(45deg);
 }
-.button-lime {
-  background: var(--lime);
-  color: var(--forest);
+.button-accent {
+  background: var(--accent);
+  color: var(--ink);
 }
-.button-lime:hover {
+.button-accent:hover {
   background: var(--white);
 }
 .button-dark {
-  background: var(--forest);
+  background: var(--ink);
   color: var(--white);
 }
 .button-dark:hover {
-  background: var(--forest-light);
+  background: var(--ink-raised);
 }
 .hero-seal {
   position: absolute;
@@ -394,7 +396,7 @@ svg {
   height: 145px;
   border: 1px solid #ffffff80;
   border-radius: 50%;
-  background: #142e28b3;
+  background: #0c2b62b3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -413,11 +415,11 @@ svg {
   width: 25px;
   height: 25px;
   margin-top: 9px;
-  color: var(--lime);
+  color: var(--accent);
 }
 .hero-seal:hover {
   transform: rotate(0);
-  background: var(--forest);
+  background: var(--ink);
 }
 .hero-bottom {
   position: absolute;
@@ -439,7 +441,7 @@ svg {
   gap: 15px;
 }
 .hero-bottom > span {
-  color: #e6eade;
+  color: #e4f0fa;
 }
 .scroll-line {
   width: 1px;
@@ -452,7 +454,7 @@ svg {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--lime);
+  background: var(--accent);
   animation: scroll-hint 2.5s ease-in-out infinite;
 }
 .hero-counter {
@@ -460,7 +462,7 @@ svg {
 }
 /* A typographic statement, then an off-grid photographic story */
 .intro {
-  background: var(--sage);
+  background: var(--mist);
   padding-bottom: 120px;
   overflow: hidden;
 }
@@ -489,7 +491,7 @@ svg {
   bottom: 3px;
   width: 85px;
   height: 72px;
-  color: var(--forest-light);
+  color: var(--brand);
 }
 .intro-aside {
   padding: 0 0 5px 50px;
@@ -544,7 +546,7 @@ svg {
   transform: rotate(6deg);
   border: 8px solid var(--paper);
   background: var(--paper);
-  box-shadow: 0 15px 30px #142e2820;
+  box-shadow: 0 15px 30px #0c2b6220;
 }
 .collage-inset .image-clip {
   height: calc(100% - 27px);
@@ -563,7 +565,7 @@ svg {
   position: absolute;
   right: 2%;
   top: 11%;
-  background: var(--lime);
+  background: var(--brand);
   padding: 22px 28px;
   transform: rotate(-7deg);
   font-family: var(--display);
@@ -633,13 +635,13 @@ svg {
 }
 /* An interactive, photographic service index */
 .care {
-  background: var(--forest);
+  background: var(--ink);
   color: var(--paper);
   padding-bottom: 55px;
   overflow: hidden;
 }
 .care .section-kicker {
-  color: var(--lime);
+  color: var(--accent);
   border-bottom: 1px solid #ffffff30;
   padding-bottom: 24px;
 }
@@ -655,14 +657,14 @@ svg {
   line-height: 0.9;
 }
 .care-heading h2 > span {
-  color: var(--lime);
+  color: var(--accent);
 }
 .care-heading > p {
   font-size: 12px;
   max-width: 300px;
   padding-bottom: 5px;
   line-height: 1.9;
-  color: #d4ddcf;
+  color: #d9eafa;
 }
 .care-tabs {
   display: none;
@@ -700,8 +702,8 @@ svg {
   font-size: 23px;
 }
 .care-tab.is-active {
-  background: var(--lime);
-  color: var(--forest);
+  background: var(--accent);
+  color: var(--ink);
 }
 .care-tab:not(.is-active):hover {
   background: #ffffff0d;
@@ -714,7 +716,7 @@ svg {
   grid-template-columns: 1.25fr 1fr;
   min-height: 490px;
   background: var(--paper);
-  color: var(--forest);
+  color: var(--ink);
   margin-bottom: 25px;
 }
 .care-selector.is-enhanced .care-panel {
@@ -739,7 +741,7 @@ svg {
   content: "";
   position: absolute;
   inset: 60% 0 0;
-  background: linear-gradient(transparent, #071b148c);
+  background: linear-gradient(transparent, #061d458c);
   pointer-events: none;
 }
 .care-image figcaption {
@@ -752,7 +754,7 @@ svg {
   letter-spacing: 0.1em;
   max-width: calc(100% - 50px);
   padding: 7px 10px;
-  background: #142e28eb;
+  background: #0c2b62eb;
 }
 .care-panel-copy {
   position: relative;
@@ -769,7 +771,7 @@ svg {
   font-family: var(--display);
   font-size: 160px;
   line-height: 1;
-  color: #142e280b;
+  color: #0c2b620b;
   pointer-events: none;
 }
 .care-panel-copy .small-label {
@@ -801,7 +803,7 @@ svg {
 }
 .care-disclaimer {
   text-align: right;
-  color: #c4d0bf;
+  color: #c3d9ec;
   font-size: 9px;
   margin-top: 18px;
 }
@@ -809,7 +811,7 @@ svg {
 .movement-chapter {
   height: 165svh;
   min-height: 1050px;
-  background: var(--forest);
+  background: var(--ink);
   position: relative;
 }
 .movement-sticky {
@@ -835,7 +837,7 @@ svg {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: #071d16b8;
+  background: #061d45b8;
 }
 .chapter-copy {
   text-align: center;
@@ -843,7 +845,7 @@ svg {
   width: 100%;
 }
 .chapter-copy > .small-label {
-  color: var(--lime);
+  color: var(--accent);
   font-size: 9px;
   letter-spacing: 0.16em;
   margin-bottom: 35px;
@@ -853,12 +855,12 @@ svg {
   line-height: 0.87;
 }
 .chapter-copy h2 > span {
-  color: var(--lime);
+  color: var(--accent);
 }
 .chapter-copy p {
   font-size: 12px;
   margin-top: 30px;
-  color: #e1e8dc;
+  color: #e1eefb;
 }
 .chapter-side {
   position: absolute;
@@ -880,7 +882,7 @@ svg {
 .chapter-progress > span {
   width: 100%;
   height: 100%;
-  background: var(--lime);
+  background: var(--accent);
   display: block;
   transform: scaleX(var(--scene-progress, 0));
   transform-origin: left;
@@ -912,7 +914,7 @@ svg {
 .round-link {
   width: 140px;
   height: 140px;
-  border: 1px solid var(--forest);
+  border: 1px solid var(--ink);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -931,7 +933,7 @@ svg {
   font-weight: 400;
 }
 .round-link:hover {
-  background: var(--lime);
+  background: var(--accent);
   transform: rotate(-7deg);
 }
 .guide-header {
@@ -1017,7 +1019,7 @@ summary::-webkit-details-marker {
   min-height: 650px;
 }
 .contact-main {
-  background: var(--lime);
+  background: var(--accent);
   padding: 37px 50px 50px var(--gutter);
 }
 .contact-topline {
@@ -1040,7 +1042,7 @@ summary::-webkit-details-marker {
   margin-top: 25px;
 }
 .contact h2 > span {
-  color: var(--forest-light);
+  color: var(--ink-raised);
 }
 .contact-action {
   margin-top: 45px;
@@ -1056,7 +1058,7 @@ summary::-webkit-details-marker {
   line-height: 1.8;
 }
 .contact-location {
-  background: var(--forest-light);
+  background: var(--ink-raised);
   color: var(--paper);
   padding: 42px var(--gutter) 40px 45px;
   position: relative;
@@ -1066,13 +1068,13 @@ summary::-webkit-details-marker {
 }
 .contact-location > .small-label {
   font-size: 8px;
-  color: var(--lime);
+  color: var(--accent);
 }
 .location-art {
   width: 100%;
   height: 200px;
   margin: 20px 0 30px;
-  color: #adbf9e;
+  color: #9bc8e9;
   opacity: 0.8;
   overflow: visible;
 }
@@ -1084,12 +1086,12 @@ summary::-webkit-details-marker {
 .contact-location p {
   font-size: 12px;
   line-height: 1.8;
-  color: #d4decd;
+  color: #d9eafa;
 }
 .contact-location .underlined-link {
   font-size: 10px;
   margin-top: 15px;
-  color: var(--lime);
+  color: var(--accent);
 }
 .location-phone {
   padding-top: 27px;
@@ -1109,7 +1111,7 @@ summary::-webkit-details-marker {
   line-height: 1.4;
 }
 .site-footer {
-  background: var(--forest);
+  background: var(--ink);
   color: var(--paper);
 }
 .footer-main {
@@ -1121,7 +1123,7 @@ summary::-webkit-details-marker {
   border-bottom: 1px solid #ffffff30;
 }
 .footer-main > p {
-  color: #c0ceba;
+  color: #c2d8ec;
   font-size: 11px;
   line-height: 1.75;
 }
@@ -1144,7 +1146,7 @@ summary::-webkit-details-marker {
   font-size: 8px;
   letter-spacing: 0.08em;
   padding-block: 20px;
-  color: #c0ceba;
+  color: #c2d8ec;
 }
 .footer-bottom > button {
   background: none;
@@ -1163,7 +1165,7 @@ summary::-webkit-details-marker {
 }
 .privacy-dialog {
   background: var(--paper);
-  color: var(--forest);
+  color: var(--ink);
   border: 1px solid var(--border);
   max-width: 570px;
   width: calc(100% - 36px);
@@ -1171,7 +1173,7 @@ summary::-webkit-details-marker {
   max-height: 85svh;
 }
 .privacy-dialog::backdrop {
-  background: #142e28cc;
+  background: #0c2b62cc;
   backdrop-filter: blur(5px);
 }
 .dialog-header {
@@ -1650,7 +1652,7 @@ summary::-webkit-details-marker {
     transform: translateY(-3.5px) rotate(-45deg);
   }
   .site-header:has(.menu-toggle[aria-expanded="true"]) {
-    background: var(--forest);
+    background: var(--ink);
   }
 }
 @media (max-width: 650px) {
@@ -1706,7 +1708,7 @@ summary::-webkit-details-marker {
     transform: translateY(-3.5px) rotate(-45deg);
   }
   .site-header:has(.menu-toggle[aria-expanded="true"]) {
-    background: var(--forest);
+    background: var(--ink);
   }
   .hero {
     height: 100svh;
@@ -1719,8 +1721,8 @@ summary::-webkit-details-marker {
   }
   .hero-shade {
     background:
-      linear-gradient(90deg, #10291fe6, #10291f6b),
-      linear-gradient(0deg, #10291fe6, transparent 40%);
+      linear-gradient(90deg, #061d45e6, #061d456b),
+      linear-gradient(0deg, #061d45e6, transparent 40%);
   }
   .hero-content {
     padding-top: 160px;

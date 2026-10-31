@@ -2,7 +2,7 @@
 
 Consultado el 30 de octubre de 2026.
 
-- Referencia del cliente: https://www.instagram.com/myfisio_grecia/ (el acceso automatizado al perfil no estuvo disponible).
+- Referencia del cliente: https://www.instagram.com/myfisio_grecia/ (se pudo consultar su imagen de perfil pública para el ajuste de color; las publicaciones del feed no estuvieron disponibles).
 - Nombre, teléfono y dirección: https://myfisio.wixsite.com/fisioterapia/contacto
 - Terapia manual y rehabilitación: https://myfisio.wixsite.com/fisioterapia/nosotras
 - Servicios de lesiones laborales y deportivas corroborados en: https://www.findglocal.com/CR/Grecia/1984116215137131/Myfisio-Cl%C3%ADnica-de-Fisioterapia-y-Rehabilitaci%C3%B3n
@@ -28,5 +28,7 @@ La redacción es una propuesta comercial original. La información de contacto d
 - Ningún código, fotografía ni identidad de estas referencias se incorporó al sitio. La composición, el símbolo y la implementación son propios de esta propuesta.
 
 ## Verificación
+
+Para el ajuste cromático se inspeccionó la imagen de perfil obtenida de los metadatos públicos de Instagram. Muestras de su degradado: `#06A0E6`, `#0786C9`, `#0967A5`, `#0B508B` y `#0C2B62`. Son muestras de la imagen comprimida, no valores de un manual oficial de marca. La interfaz deriva de ellas sus azules y usa cian claro (`#87D9F5`) y blanco para conservar contraste. El lima se limita al punto de marca.
 
 Se comprueban estructura HTML, recursos locales, enlaces, contraste de la paleta, sintaxis y comportamiento mediante pruebas DOM de código. La revisión visual en navegador no pudo ejecutarse: el permiso de acceso a la web fue rechazado por la política del navegador. No se utilizaron vías alternativas para eludir ese rechazo.

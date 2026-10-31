@@ -1,6 +1,6 @@
 # MyFisio Grecia
 
-Sitio para una clínica de fisioterapia y rehabilitación en Grecia, Costa Rica. Implementado en HTML, CSS y JavaScript nativos, sin framework ni proceso de compilación. Rediseño con hero fotográfico a pantalla completa, tipografía condensada, paleta bosque/lima/salvia y composiciones asimétricas.
+Sitio para una clínica de fisioterapia y rehabilitación en Grecia, Costa Rica. Implementado en HTML, CSS y JavaScript nativos, sin framework ni proceso de compilación. Hero fotográfico a pantalla completa, tipografía condensada y composiciones asimétricas. La paleta toma como referencia la imagen de perfil de Instagram de MyFisio: azul profundo, cian y blanco, con detalles mínimos en lima.
 
 ## Desarrollo
 
