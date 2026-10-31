@@ -3,27 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#18394a" />
-    <title>MyFisio Grecia — Salud en movimiento</title>
+    <meta name="theme-color" content="#142e28" />
+    <title>MyFisio Grecia — Volvé a moverte</title>
     <meta
       name="description"
-      content="Fisioterapia, terapia manual y rehabilitación en Grecia, Alajuela. Volvé a moverte con confianza. Consultá por tu cita en MyFisio al 8849-2736."
+      content="Tu cuerpo. Tu ritmo. Tu vida. Fisioterapia, terapia manual y rehabilitación en Grecia, Costa Rica. Coordiná tu valoración por WhatsApp al 8849-2736."
     />
-    <meta property="og:title" content="MyFisio Grecia — Salud en movimiento" />
+    <meta property="og:title" content="MyFisio Grecia — Volvé a moverte" />
     <meta
       property="og:description"
-      content="Volvé a disfrutar lo que te mueve. Fisioterapia y rehabilitación en Grecia, Costa Rica."
+      content="Fisioterapia y rehabilitación para volver a lo que te hace bien. Grecia, Costa Rica."
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_CR" />
     <meta
       property="og:image"
-      content="https://myfisio-grecia.vercel.app/assets/therapy.jpg"
+      content="https://myfisio-grecia.vercel.app/assets/hero-rehab.jpg"
     />
     <meta property="og:url" content="https://myfisio-grecia.vercel.app/" />
     <link rel="canonical" href="https://myfisio-grecia.vercel.app/" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="preload" as="image" href="assets/therapy.jpg" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/hero-rehab.jpg"
+      as="image"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="assets/barlow-condensed-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
     <script type="application/ld+json">
@@ -46,492 +58,647 @@
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
-    <header class="site-header">
-      <a href="#inicio" class="brand" aria-label="MyFisio, inicio"
-        ><svg
-          class="brand-symbol"
-          viewBox="0 0 48 48"
-          fill="none"
-          aria-hidden="true"
-        >
+    <header class="site-header" data-header>
+      <a class="brand" href="#inicio" aria-label="MyFisio, inicio"
+        ><svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
           <path
-            d="M7 33C7 18 17 12 24 12s17 6 17 21M14 33c0-10 5-15 10-15s10 5 10 15M21 33V23"
+            d="M5 30V17a8 8 0 0 1 16 0v13M21 30V17a7 7 0 0 1 14 0v13"
             stroke="currentColor"
-            stroke-width="3.3"
+            stroke-width="3.5"
             stroke-linecap="round"
           />
-          <circle cx="30" cy="6" r="3" fill="currentColor" /></svg
-        ><span
-          >myfisio<span class="brand-dot">.</span
-          ><small>FISIOTERAPIA & REHABILITACIÓN</small></span
-        ></a
+          <circle cx="21" cy="4" r="2.5" fill="currentColor" /></svg
+        ><span>myfisio<span class="brand-dot">.</span></span></a
       >
       <nav class="desktop-nav" aria-label="Navegación principal">
-        <a href="#nosotros">Nuestra esencia</a
-        ><a href="#servicios">Cómo te ayudamos</a
-        ><a href="#proceso">Tu proceso</a>
+        <a href="#esencia">La clínica</a><a href="#servicios">Tu cuidado</a
+        ><a href="#primera-visita">Primera visita</a>
       </nav>
-      <a
-        class="button button-small header-cta"
-        href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20quisiera%20consultar%20por%20una%20cita."
-        target="_blank"
-        rel="noopener noreferrer"
-        >Agendá tu cita <span aria-hidden="true">↗</span></a
-      >
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="mobile-nav"
-        aria-label="Abrir menú"
-      >
-        <span></span><span></span>
-      </button>
+      <div class="header-actions">
+        <a
+          class="header-booking"
+          href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20quisiera%20coordinar%20una%20valoraci%C3%B3n."
+          target="_blank"
+          rel="noopener noreferrer"
+          >Agendá tu cita <span aria-hidden="true">↗</span></a
+        ><button
+          class="menu-toggle"
+          type="button"
+          aria-controls="mobile-nav"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
       <nav
-        id="mobile-nav"
         class="mobile-nav"
+        id="mobile-nav"
         aria-label="Navegación móvil"
         hidden
       >
-        <a href="#nosotros">Nuestra esencia</a
-        ><a href="#servicios">Cómo te ayudamos</a
-        ><a href="#proceso">Tu proceso</a
-        ><a href="#contacto">Contacto y citas ↗</a>
+        <a href="#esencia">La clínica <span>01</span></a
+        ><a href="#servicios">Tu cuidado <span>02</span></a
+        ><a href="#primera-visita">Primera visita <span>03</span></a
+        ><a href="#contacto">Hablemos <span>↗</span></a>
       </nav>
     </header>
-
     <main id="contenido">
       <section
-        class="hero section-shell"
+        class="hero"
         id="inicio"
         aria-labelledby="hero-title"
+        data-scroll-scene
+        data-zoom="0.14"
+        data-travel="3"
       >
-        <div class="hero-copy">
-          <p class="eyebrow">
-            <span class="status-dot"></span> GRECIA, COSTA RICA
-            <span class="eyebrow-divider"></span> SALUD EN MOVIMIENTO
+        <div class="hero-background scene-media">
+          <img
+            src="assets/hero-rehab.jpg"
+            width="2000"
+            height="1333"
+            fetchpriority="high"
+            alt="Una paciente realiza un ejercicio con banda elástica con acompañamiento profesional"
+            data-scroll-image
+          />
+        </div>
+        <div class="hero-shade"></div>
+        <div class="hero-content page-shell">
+          <p class="eyebrow hero-eyebrow">
+            <span class="live-dot"></span> FISIOTERAPIA & REHABILITACIÓN
+            <span class="hero-location">GRECIA, COSTA RICA</span>
           </p>
-          <h1 id="hero-title">
-            Volvé a disfrutar<br />lo que te
-            <span class="word-motion"
-              >mueve.<svg
-                viewBox="0 0 380 22"
-                preserveAspectRatio="none"
+          <h1 id="hero-title">VOLVÉ A<br /><span>MOVERTE.</span></h1>
+          <div class="hero-description">
+            <p>
+              Volvé a lo que te hace bien.<br />Nosotros te acompañamos en el
+              camino.
+            </p>
+            <a
+              class="button button-lime"
+              href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20me%20gustar%C3%ADa%20coordinar%20una%20valoraci%C3%B3n."
+              target="_blank"
+              rel="noopener noreferrer"
+              >Empezá por vos
+              <span class="button-arrow" aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+        <a
+          class="hero-seal"
+          href="#esencia"
+          aria-label="Conocé nuestra forma de cuidarte"
+          ><span>TU CUERPO.<br />TU RITMO.<br />TU VIDA.</span
+          ><svg viewBox="0 0 70 70" fill="none" aria-hidden="true">
+            <path
+              d="M12 13h45v44M56 14 12 58"
+              stroke="currentColor"
+              stroke-width="2"
+            /></svg
+        ></a>
+        <div class="hero-bottom page-shell">
+          <a href="#esencia"
+            ><span class="scroll-line" aria-hidden="true"></span> BAJÁ. HAY
+            MUCHO POR VIVIR.</a
+          ><span>ATENCIÓN CERCANA. MOVIMIENTO REAL.</span
+          ><span class="hero-counter" aria-hidden="true">01 — 05</span>
+        </div>
+      </section>
+      <section
+        class="intro page-shell"
+        id="esencia"
+        aria-labelledby="intro-title"
+      >
+        <div class="section-kicker">
+          <span>01 / LA ESENCIA</span><span>SALUD EN MOVIMIENTO</span>
+        </div>
+        <div class="intro-statement">
+          <h2 id="intro-title">
+            NO ES SOLO<br />RECUPERAR<br /><span class="intro-last-line"
+              >EL MOVIMIENTO.<svg
+                class="motion-mark"
+                viewBox="0 0 110 90"
+                fill="none"
                 aria-hidden="true"
               >
                 <path
-                  d="M3 14C100 0 265 1 377 12M28 21C152 8 258 9 341 18"
+                  d="M4 70c20-70 30-70 48 0S86 140 105 12M4 50c20-70 30-70 48 0S86 120 105 0"
+                  stroke="currentColor"
+                  stroke-width="2"
                 /></svg
             ></span>
-          </h1>
-          <div class="hero-copy-bottom">
-            <p>
-              Tu cuerpo tiene historias por vivir.<br />Te acompañamos a
-              recuperar el movimiento,<br class="desktop-break" />
-              la confianza y tu bienestar.
-            </p>
-            <a
-              class="button"
-              href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n."
-              target="_blank"
-              rel="noopener noreferrer"
-              >Dá el primer paso <span aria-hidden="true">↗</span></a
-            >
-          </div>
-          <a class="scroll-link" href="#nosotros"
-            ><span class="circle-arrow" aria-hidden="true">↓</span> Conocé
-            MyFisio</a
-          >
-        </div>
-        <div class="hero-visual">
-          <img
-            src="assets/therapy.jpg"
-            width="1400"
-            height="933"
-            alt="Sesión de terapia manual enfocada en la movilidad de la espalda"
-            fetchpriority="high"
-          /><span class="photo-index">01 / EL MOVIMIENTO ES VIDA</span>
-          <div class="orbit-stamp" aria-hidden="true">
-            <svg viewBox="0 0 120 120">
-              <defs>
-                <path
-                  id="stamp-circle"
-                  d="M60,60m-44,0a44,44 0 1,1 88,0a44,44 0 1,1 -88,0"
-                />
-              </defs>
-              <text>
-                <textPath href="#stamp-circle">
-                  TU BIENESTAR · NUESTRO PROPÓSITO ·
-                </textPath>
-              </text></svg
-            ><span>↗</span>
-          </div>
-          <div class="image-note">
-            <span class="note-icon" aria-hidden="true">✳</span>
-            <p>
-              Más que tratar una lesión.<br /><strong>Cuidamos de vos.</strong>
-            </p>
-          </div>
-        </div>
-        <div class="hero-footnote">
-          <span>FISIOTERAPIA CON UN ENFOQUE HUMANO</span
-          ><span
-            >Un paso a la vez. Siempre con vos.
-            <span aria-hidden="true">↗</span></span
-          >
-        </div>
-      </section>
-
-      <div class="movement-band" aria-hidden="true">
-        <div>
-          <span>Menos límites.</span><i>✳</i><span>Más movimiento.</span><i>✳</i
-          ><span>Más vos.</span><i>✳</i><span>Menos límites.</span><i>✳</i
-          ><span>Más movimiento.</span><i>✳</i><span>Más vos.</span><i>✳</i>
-        </div>
-      </div>
-
-      <section
-        class="about section-shell section-space"
-        id="nosotros"
-        aria-labelledby="about-title"
-      >
-        <div class="section-label">
-          <span class="mini-cross" aria-hidden="true">✳</span> NUESTRA ESENCIA
-          <span class="section-number">01</span>
-        </div>
-        <div class="about-content">
-          <h2 id="about-title">
-            Detrás de cada movimiento,<br />hay algo que <em>te importa.</em>
           </h2>
-          <div class="about-details">
+          <div class="intro-aside">
+            <span class="small-label">ES RECUPERAR UN POQUITO DE VOS.</span>
             <p>
-              Caminar sin pensarlo. Volver a entrenar. Abrazar a los tuyos. En
-              MyFisio entendemos que tu bienestar se vive en las cosas de todos
-              los días.
+              Ese paseo. Ese entrenamiento. Ese abrazo.<br />Hay mucho más
+              detrás de cada movimiento.
             </p>
+          </div>
+        </div>
+        <div class="clinic-story">
+          <div class="story-collage">
+            <figure class="collage-main" data-scroll-scene data-zoom="0.13">
+              <div class="image-clip scene-media">
+                <img
+                  src="assets/manual.jpg"
+                  width="1000"
+                  height="1500"
+                  loading="lazy"
+                  alt="Atención manual personalizada de cuello y hombro"
+                  data-scroll-image
+                />
+              </div>
+              <figcaption>01 / UN CUIDADO QUE ESCUCHA</figcaption>
+            </figure>
+            <figure class="collage-inset" data-scroll-scene data-zoom="0.16">
+              <div class="image-clip scene-media">
+                <img
+                  src="assets/outdoors.jpg"
+                  width="1280"
+                  height="1920"
+                  loading="lazy"
+                  alt="Un corredor retoma su actividad al aire libre"
+                  data-scroll-image
+                />
+              </div>
+              <figcaption>VOLVER A LO TUYO. ↗</figcaption>
+            </figure>
+            <span class="collage-label">EN BUENAS<br />MANOS.</span>
+          </div>
+          <div class="story-copy">
+            <span class="small-label">SOMOS MYFISIO. ESTAMOS CERCA.</span>
+            <h3>Tu historia<br /><span>nos mueve.</span></h3>
             <p>
               Somos una clínica de fisioterapia y rehabilitación en Grecia. Un
-              espacio para escucharte, entender lo que necesitás y acompañarte
-              con una atención cercana y personalizada.
+              espacio para bajar el ritmo, escucharte y entender qué necesitás
+              para seguir adelante.
             </p>
-          </div>
-          <div class="principles">
-            <span><b aria-hidden="true">↗</b> Atención personalizada</span
-            ><span><b aria-hidden="true">↗</b> Un enfoque humano</span
-            ><span><b aria-hidden="true">↗</b> A tu propio ritmo</span>
+            <p>
+              Trabajamos con atención personalizada y un enfoque humano. Porque
+              tu cuerpo no es igual a ningún otro. Y tu proceso tampoco.
+            </p>
+            <a class="underlined-link" href="#servicios"
+              >Conocé cómo podemos acompañarte
+              <span aria-hidden="true">↗</span></a
+            >
+            <div class="story-signoff">
+              <svg viewBox="0 0 80 40" fill="none" aria-hidden="true">
+                <path
+                  d="m3 31 14-22-6 24L34 8l-8 25L50 8l-9 25L75 5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                /></svg
+              ><span>Cerca de vos.<br />En cada paso.</span>
+            </div>
           </div>
         </div>
       </section>
-
-      <section
-        class="services section-shell section-space"
-        id="servicios"
-        aria-labelledby="services-title"
-      >
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">CÓMO TE AYUDAMOS / 02</p>
-            <h2 id="services-title">
-              Cada cuerpo es único.<br /><em>Tu cuidado también.</em>
-            </h2>
+      <section class="care" id="servicios" aria-labelledby="care-title">
+        <div class="page-shell">
+          <div class="section-kicker">
+            <span>02 / TU CUIDADO</span
+            ><span>UN PUNTO DE PARTIDA PARA CADA HISTORIA</span>
           </div>
-          <p>
-            Encontrá un punto de partida.<br />Tu valoración nos ayuda a
-            definir<br />el camino adecuado para vos.
+          <div class="care-heading">
+            <h2 id="care-title">¿QUÉ TE<br /><span>MUEVE HOY?</span></h2>
+            <p>
+              Elegí lo que se parece a tu momento.<br />En tu valoración
+              definimos juntos<br />el abordaje adecuado para vos.
+            </p>
+          </div>
+          <div class="care-selector" data-care-selector>
+            <div class="care-tabs" aria-label="Áreas de atención">
+              <button
+                id="tab-rehab"
+                type="button"
+                class="care-tab is-active"
+                data-panel="panel-rehab"
+              >
+                <span>01</span> Rehabilitación
+                <span class="tab-arrow" aria-hidden="true">↗</span></button
+              ><button
+                id="tab-manual"
+                type="button"
+                class="care-tab"
+                data-panel="panel-manual"
+              >
+                <span>02</span> Terapia manual
+                <span class="tab-arrow" aria-hidden="true">↗</span></button
+              ><button
+                id="tab-sport"
+                type="button"
+                class="care-tab"
+                data-panel="panel-sport"
+              >
+                <span>03</span> Lesiones deportivas
+                <span class="tab-arrow" aria-hidden="true">↗</span></button
+              ><button
+                id="tab-work"
+                type="button"
+                class="care-tab"
+                data-panel="panel-work"
+              >
+                <span>04</span> Lesiones laborales
+                <span class="tab-arrow" aria-hidden="true">↗</span>
+              </button>
+            </div>
+            <div class="care-stage">
+              <article
+                class="care-panel"
+                id="panel-rehab"
+                aria-labelledby="tab-rehab"
+              >
+                <figure class="care-image" data-scroll-scene data-zoom="0.12">
+                  <div class="image-clip scene-media">
+                    <img
+                      src="assets/hero-rehab.jpg"
+                      width="2000"
+                      height="1333"
+                      loading="lazy"
+                      alt="Ejercicio de rehabilitación con una banda de resistencia"
+                      data-scroll-image
+                    />
+                  </div>
+                  <figcaption>MOVIMIENTO CON ACOMPAÑAMIENTO.</figcaption>
+                </figure>
+                <div class="care-panel-copy">
+                  <span class="panel-count" aria-hidden="true">01</span
+                  ><span class="small-label">VOLVER A TUS ACTIVIDADES</span>
+                  <h3>Un nuevo<br />comienzo.</h3>
+                  <p>
+                    Fisioterapia y rehabilitación para acompañarte en tus
+                    actividades diarias, a partir de una valoración individual y
+                    de lo que querés volver a hacer.
+                  </p>
+                  <a
+                    class="underlined-link"
+                    href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20quisiera%20consultar%20sobre%20fisioterapia%20y%20rehabilitaci%C3%B3n."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Conversemos sobre tu caso
+                    <span aria-hidden="true">↗</span></a
+                  ><span class="panel-footnote"
+                    >TU PROCESO. A TU PROPIO RITMO.</span
+                  >
+                </div>
+              </article>
+              <article
+                class="care-panel"
+                id="panel-manual"
+                aria-labelledby="tab-manual"
+              >
+                <figure class="care-image" data-scroll-scene data-zoom="0.12">
+                  <div class="image-clip scene-media">
+                    <img
+                      src="assets/manual.jpg"
+                      width="1000"
+                      height="1500"
+                      loading="lazy"
+                      alt="Técnica manual aplicada en cuello y hombro"
+                      data-scroll-image
+                    />
+                  </div>
+                  <figcaption>EL VALOR DE ESTAR EN BUENAS MANOS.</figcaption>
+                </figure>
+                <div class="care-panel-copy">
+                  <span class="panel-count" aria-hidden="true">02</span
+                  ><span class="small-label">ATENCIÓN EN CADA DETALLE</span>
+                  <h3>Manos que<br />acompañan.</h3>
+                  <p>
+                    Atención con técnicas de terapia manual adaptadas a tu
+                    valoración y a las necesidades de tu cuerpo. Un momento para
+                    entender tus molestias y cuidar de vos.
+                  </p>
+                  <a
+                    class="underlined-link"
+                    href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20quisiera%20consultar%20sobre%20terapia%20manual."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Consultá por terapia manual
+                    <span aria-hidden="true">↗</span></a
+                  ><span class="panel-footnote"
+                    >UN ABORDAJE TAN PERSONAL COMO VOS.</span
+                  >
+                </div>
+              </article>
+              <article
+                class="care-panel"
+                id="panel-sport"
+                aria-labelledby="tab-sport"
+              >
+                <figure class="care-image" data-scroll-scene data-zoom="0.12">
+                  <div class="image-clip scene-media">
+                    <img
+                      src="assets/sport.jpg"
+                      width="1200"
+                      height="800"
+                      loading="lazy"
+                      alt="Una mujer prepara su equipo para realizar actividad física"
+                      data-scroll-image
+                    />
+                  </div>
+                  <figcaption>VOLVER A HACER LO QUE DISFRUTÁS.</figcaption>
+                </figure>
+                <div class="care-panel-copy">
+                  <span class="panel-count" aria-hidden="true">03</span
+                  ><span class="small-label"
+                    >TU PRÓXIMO ENTRENAMIENTO EMPIEZA ACÁ</span
+                  >
+                  <h3>Que siga<br />lo bueno.</h3>
+                  <p>
+                    Valoración y rehabilitación de lesiones deportivas para
+                    acompañarte en el regreso a la actividad física, con un
+                    abordaje que respete tu evolución.
+                  </p>
+                  <a
+                    class="underlined-link"
+                    href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20quisiera%20consultar%20por%20una%20lesi%C3%B3n%20deportiva."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Hablemos de tu lesión <span aria-hidden="true">↗</span></a
+                  ><span class="panel-footnote"
+                    >LA META ES ENCONTRAR TU CAMINO.</span
+                  >
+                </div>
+              </article>
+              <article
+                class="care-panel"
+                id="panel-work"
+                aria-labelledby="tab-work"
+              >
+                <figure class="care-image" data-scroll-scene data-zoom="0.12">
+                  <div class="image-clip scene-media">
+                    <img
+                      src="assets/therapy.jpg"
+                      width="1400"
+                      height="933"
+                      loading="lazy"
+                      alt="Valoración y atención manual de la espalda"
+                      data-scroll-image
+                    />
+                  </div>
+                  <figcaption>
+                    TU BIENESTAR TAMBIÉN ES PARTE DEL DÍA.
+                  </figcaption>
+                </figure>
+                <div class="care-panel-copy">
+                  <span class="panel-count" aria-hidden="true">04</span
+                  ><span class="small-label">CUIDARTE EN LO COTIDIANO</span>
+                  <h3>Sentite mejor<br />en tu día.</h3>
+                  <p>
+                    Un espacio para valorar las molestias y lesiones que afectan
+                    tu jornada laboral y conversar sobre tu recuperación y tus
+                    hábitos de movimiento.
+                  </p>
+                  <a
+                    class="underlined-link"
+                    href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20quisiera%20consultar%20por%20una%20lesi%C3%B3n%20laboral."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Contanos qué necesitás <span aria-hidden="true">↗</span></a
+                  ><span class="panel-footnote"
+                    >TU CUERPO MERECE UNA PAUSA.</span
+                  >
+                </div>
+              </article>
+            </div>
+          </div>
+          <p class="care-disclaimer">
+            Cada proceso empieza con una valoración. El tratamiento se adapta a
+            tus necesidades.
           </p>
         </div>
-        <div class="services-layout">
-          <div class="service-list">
-            <details class="service-item" open>
-              <summary>
-                <span class="service-number">01</span>
-                <h3>Fisioterapia y rehabilitación</h3>
-                <span class="service-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="service-body">
-                <p>
-                  Un acompañamiento pensado para tu movilidad y tus actividades
-                  diarias, a partir de una valoración individual.
-                </p>
-                <a
-                  href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20quiero%20consultar%20sobre%20fisioterapia%20y%20rehabilitaci%C3%B3n."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Consultá por este servicio
-                  <span aria-hidden="true">↗</span></a
-                >
-              </div>
-            </details>
-            <details class="service-item">
-              <summary>
-                <span class="service-number">02</span>
-                <h3>Terapia manual</h3>
-                <span class="service-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="service-body">
-                <p>
-                  Atención con técnicas manuales, adaptadas a tu valoración y a
-                  las necesidades de tu cuerpo.
-                </p>
-                <a
-                  href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20quiero%20consultar%20sobre%20terapia%20manual."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Consultá por este servicio
-                  <span aria-hidden="true">↗</span></a
-                >
-              </div>
-            </details>
-            <details class="service-item">
-              <summary>
-                <span class="service-number">03</span>
-                <h3>Lesiones deportivas</h3>
-                <span class="service-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="service-body">
-                <p>
-                  Valoración y rehabilitación para acompañarte en el regreso a
-                  la actividad física, según tu evolución.
-                </p>
-                <a
-                  href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20quiero%20consultar%20por%20una%20lesi%C3%B3n%20deportiva."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Consultá por este servicio
-                  <span aria-hidden="true">↗</span></a
-                >
-              </div>
-            </details>
-            <details class="service-item">
-              <summary>
-                <span class="service-number">04</span>
-                <h3>Lesiones laborales</h3>
-                <span class="service-toggle" aria-hidden="true"></span>
-              </summary>
-              <div class="service-body">
-                <p>
-                  Un espacio para valorar las molestias que afectan tu jornada y
-                  conversar sobre tu recuperación y hábitos de movimiento.
-                </p>
-                <a
-                  href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20quiero%20consultar%20por%20una%20lesi%C3%B3n%20laboral."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Consultá por este servicio
-                  <span aria-hidden="true">↗</span></a
-                >
-              </div>
-            </details>
-          </div>
-          <figure class="service-photo">
+      </section>
+      <section
+        class="movement-chapter"
+        aria-labelledby="movement-title"
+        data-scroll-scene
+        data-zoom="0.24"
+        data-travel="4"
+        data-sticky-scene
+      >
+        <div class="movement-sticky">
+          <div class="chapter-background scene-media">
             <img
               src="assets/movement.jpg"
               width="1000"
               height="667"
               loading="lazy"
-              alt="Trabajo manual de hombro durante una sesión de fisioterapia"
+              alt="Fisioterapia de hombro con atención cercana y personalizada"
+              data-scroll-image
             />
-            <figcaption>
-              <span>ENFOCADOS EN VOS</span><span aria-hidden="true">↗</span>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section
-        class="process section-space"
-        id="proceso"
-        aria-labelledby="process-title"
-      >
-        <div class="section-shell">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">TU PROCESO / 03</p>
-              <h2 id="process-title">
-                Un nuevo comienzo.<br /><em>Un paso a la vez.</em>
-              </h2>
-            </div>
-            <svg
-              class="process-symbol"
-              viewBox="0 0 100 100"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M10 80C10 40 30 10 50 10S90 40 90 80M28 80c0-30 10-51 22-51s22 21 22 51M46 80V49"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-              />
-            </svg>
           </div>
-          <ol class="process-steps">
-            <li>
-              <span class="step-index"
-                >01 <span aria-hidden="true">↗</span></span
-              >
-              <h3>Conversemos</h3>
-              <p>
-                Escribinos por WhatsApp. Contanos qué necesitás y coordinemos tu
-                valoración.
-              </p>
-            </li>
-            <li>
-              <span class="step-index"
-                >02 <span aria-hidden="true">↗</span></span
-              >
-              <h3>Te escuchamos</h3>
-              <p>
-                Conocemos tu historia, valoramos tu movimiento y conversamos
-                sobre tus objetivos.
-              </p>
-            </li>
-            <li>
-              <span class="step-index"
-                >03 <span aria-hidden="true">↗</span></span
-              >
-              <h3>Avancemos juntos</h3>
-              <p>
-                Definimos tu abordaje y te acompañamos durante el proceso,
-                respetando tu ritmo.
-              </p>
-            </li>
-          </ol>
+          <div class="chapter-shade"></div>
+          <div class="chapter-copy">
+            <span class="small-label">03 / EL MOTIVO SOS VOS</span>
+            <h2 id="movement-title">
+              PEQUEÑOS<br />MOVIMIENTOS.<br /><span>GRANDES<br />MOTIVOS.</span>
+            </h2>
+            <p>
+              Tu recuperación tiene un para qué.<br />Estamos para acompañarte a
+              encontrar el cómo.
+            </p>
+          </div>
+          <span class="chapter-side" aria-hidden="true"
+            >MYFISIO — SALUD EN MOVIMIENTO</span
+          >
+          <div class="chapter-progress" aria-hidden="true">
+            <span data-scene-progress></span>
+          </div>
         </div>
       </section>
-
       <section
-        class="questions section-shell section-space"
-        aria-labelledby="faq-title"
+        class="first-visit page-shell"
+        id="primera-visita"
+        aria-labelledby="visit-title"
       >
-        <div>
-          <p class="eyebrow">ANTES DE TU VISITA / 04</p>
-          <h2 id="faq-title">Es normal tener<br /><em>preguntas.</em></h2>
-          <p class="faq-intro">
-            Estamos para ayudarte a dar<br />ese primer paso con confianza.
+        <div class="visit-title">
+          <span class="small-label">04 / EL PRIMER PASO</span>
+          <h2 id="visit-title">VENÍ<br /><span>COMO SOS.</span></h2>
+          <p>
+            Con tus preguntas. Con tus metas.<br />Con las ganas de volver a
+            sentirte vos.
           </p>
-        </div>
-        <div class="faq-list">
-          <details>
-            <summary>
-              ¿Cómo puedo agendar una cita?<span aria-hidden="true">+</span>
-            </summary>
-            <p>
-              Escribinos al WhatsApp 8849-2736 o llamanos. Te ayudamos a
-              coordinar la fecha y hora según la disponibilidad de la clínica.
-            </p>
-          </details>
-          <details>
-            <summary>
-              ¿Qué debo llevar a mi primera visita?<span aria-hidden="true"
-                >+</span
-              >
-            </summary>
-            <p>
-              Traé ropa cómoda que te permita moverte. Si tenés estudios,
-              referencias o informes relacionados con tu consulta, podés
-              llevarlos. Consultanos por WhatsApp si necesitás alguna indicación
-              adicional.
-            </p>
-          </details>
-          <details>
-            <summary>
-              ¿Cuántas sesiones voy a necesitar?<span aria-hidden="true"
-                >+</span
-              >
-            </summary>
-            <p>
-              Depende de tu valoración, tus objetivos y tu evolución. En tu
-              consulta podemos conversar sobre el abordaje que se ajuste a vos.
-            </p>
-          </details>
-          <details>
-            <summary>
-              ¿Dónde se encuentra la clínica?<span aria-hidden="true">+</span>
-            </summary>
-            <p>
-              Estamos en Grecia, Alajuela, 300 metros norte de Mall Plaza
-              Grecia. Escribinos antes de tu visita para confirmar las
-              indicaciones de llegada.
-            </p>
-          </details>
-        </div>
-      </section>
-
-      <section
-        class="contact section-shell"
-        id="contacto"
-        aria-labelledby="contact-title"
-      >
-        <div class="contact-top">
-          <p class="eyebrow">
-            <span class="status-dot"></span> EL PRIMER PASO EMPIEZA CON VOS
-          </p>
-          <h2 id="contact-title">
-            Tu próxima historia<br />empieza <em>en movimiento.</em>
-          </h2>
           <a
-            class="button button-light"
-            href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20me%20gustar%C3%ADa%20coordinar%20una%20valoraci%C3%B3n.%20%C2%BFMe%20comparten%20la%20disponibilidad%3F"
+            class="round-link"
+            href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20quiero%20coordinar%20mi%20primera%20visita.%20%C2%BFMe%20comparten%20la%20disponibilidad%3F"
             target="_blank"
             rel="noopener noreferrer"
-            >Conversemos por WhatsApp <span aria-hidden="true">↗</span></a
+            ><span>COORDINÁ<br />TU VISITA</span
+            ><span aria-hidden="true">↗</span></a
           >
-          <p class="contact-note">
-            Consultá disponibilidad y coordiná tu valoración.
-          </p>
         </div>
-        <div class="contact-info">
-          <div>
-            <span class="contact-label">VENÍ A VISITARNOS</span>
-            <p>
-              Grecia, Alajuela, Costa Rica<br />300 m norte de Mall Plaza Grecia
-            </p>
+        <div class="visit-guide">
+          <div class="guide-header">
+            <span>ASÍ EMPEZAMOS</span><span>DE VOS A VOS.</span>
+          </div>
+          <ol class="visit-steps">
+            <li>
+              <span class="step-number">01</span>
+              <div>
+                <h3>Hablemos primero.</h3>
+                <p>
+                  Escribinos por WhatsApp, contanos qué necesitás y coordinemos
+                  tu valoración según la disponibilidad.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step-number">02</span>
+              <div>
+                <h3>Queremos escucharte.</h3>
+                <p>
+                  En tu visita conocemos tu historia, valoramos tu movimiento y
+                  conversamos sobre tus objetivos.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step-number">03</span>
+              <div>
+                <h3>Hagamos un plan.</h3>
+                <p>
+                  Definimos tu abordaje y te acompañamos durante el proceso. Un
+                  paso a la vez, a tu ritmo.
+                </p>
+              </div>
+            </li>
+          </ol>
+          <div class="visit-faq">
+            <details>
+              <summary>
+                ¿Qué llevo a mi primera cita? <span aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Ropa cómoda que te permita moverte. Si tenés estudios o informes
+                relacionados con tu consulta, podés llevarlos. Escribinos si
+                necesitás alguna indicación adicional.
+              </p>
+            </details>
+            <details>
+              <summary>
+                ¿Cuántas sesiones necesito? <span aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Depende de tu valoración, tus objetivos y tu evolución. En tu
+                consulta podemos conversar sobre el abordaje adecuado para vos.
+              </p>
+            </details>
+            <details>
+              <summary>
+                ¿Dónde se encuentra la clínica?
+                <span aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Estamos en Grecia, Alajuela, 300 metros norte de Mall Plaza
+                Grecia. Escribinos para confirmar las indicaciones de llegada
+                antes de tu visita.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contacto" aria-labelledby="contact-title">
+        <div class="contact-main">
+          <div class="contact-topline">
+            <span class="small-label">05 / HABLEMOS</span
+            ><span class="contact-spark" aria-hidden="true">↗</span>
+          </div>
+          <h2 id="contact-title">EMPEZÁ<br />POR <span>VOS.</span></h2>
+          <div class="contact-action">
             <a
+              class="button button-dark"
+              href="https://wa.me/50688492736?text=Hola%20MyFisio%2C%20me%20gustar%C3%ADa%20coordinar%20una%20valoraci%C3%B3n.%20%C2%BFMe%20comparten%20la%20disponibilidad%3F"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Hablemos por WhatsApp
+              <span class="button-arrow" aria-hidden="true">↗</span></a
+            >
+            <p>Un mensaje puede ser<br />el comienzo de algo bueno.</p>
+          </div>
+        </div>
+        <aside class="contact-location">
+          <span class="small-label">NOS VEMOS EN GRECIA, CR.</span
+          ><svg
+            class="location-art"
+            viewBox="0 0 300 220"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M-20 194C60 70 190 270 310 36M-30 165C70 40 190 240 310 7M-30 136C70 11 190 211 310-22M-30 107C70-18 190 182 310-51M-30 78C70-47 190 153 310-80"
+              stroke="currentColor"
+              stroke-width="1"
+            />
+            <circle cx="155" cy="125" r="35" fill="#d2ed4e" />
+            <path
+              d="M155 139s13-13 13-23a13 13 0 1 0-26 0c0 10 13 23 13 23Z"
+              stroke="#142e28"
+              stroke-width="1.7"
+            />
+            <circle
+              cx="155"
+              cy="116"
+              r="4"
+              stroke="#142e28"
+              stroke-width="1.7"
+            />
+          </svg>
+          <div>
+            <h3>Cerca de vos.</h3>
+            <p>Grecia, Alajuela.<br />300 m norte de Mall Plaza Grecia.</p>
+            <a
+              class="underlined-link"
               href="https://www.google.com/maps/search/?api=1&query=Myfisio+Grecia+Costa+Rica"
               target="_blank"
               rel="noopener noreferrer"
-              >Buscar cómo llegar <span aria-hidden="true">↗</span></a
+              >Buscá cómo llegar <span aria-hidden="true">↗</span></a
             >
           </div>
-          <div>
-            <span class="contact-label">HABLEMOS</span
-            ><a class="phone-link" href="tel:+50688492736">+506 8849-2736</a
-            ><span>Atención con cita previa</span>
+          <div class="location-phone">
+            <span>¿PREFERÍS LLAMAR?</span
+            ><a href="tel:+50688492736">+506 8849-2736 ↗</a>
           </div>
-          <div>
-            <span class="contact-label">SEGUÍ EN MOVIMIENTO</span
-            ><a
-              href="https://www.instagram.com/myfisio_grecia/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >@myfisio_grecia <span aria-hidden="true">↗</span></a
-            ><span>Encontranos en Instagram</span>
-          </div>
-        </div>
+        </aside>
       </section>
     </main>
-    <footer class="site-footer section-shell">
-      <a
-        class="footer-wordmark"
-        href="#inicio"
-        aria-label="MyFisio, volver al inicio"
-        >myfisio<span>.</span></a
-      >
+    <footer class="site-footer page-shell">
+      <div class="footer-main">
+        <a class="brand" href="#inicio" aria-label="MyFisio, volver al inicio"
+          ><svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path
+              d="M5 30V17a8 8 0 0 1 16 0v13M21 30V17a7 7 0 0 1 14 0v13"
+              stroke="currentColor"
+              stroke-width="3.5"
+              stroke-linecap="round"
+            />
+            <circle cx="21" cy="4" r="2.5" fill="currentColor" /></svg
+          ><span>myfisio.</span></a
+        >
+        <p>Fisioterapia que te acompaña.<br />Salud en movimiento.</p>
+        <a
+          class="footer-instagram"
+          href="https://www.instagram.com/myfisio_grecia/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >SEGUÍ EN MOVIMIENTO<br /><span>@myfisio_grecia ↗</span></a
+        >
+      </div>
       <div class="footer-bottom">
-        <span>© <span id="year">2026</span> MyFisio Grecia</span
-        ><span>Salud en movimiento. Hecho para vos.</span
-        ><button class="text-button" type="button" data-open-privacy>
-          Privacidad</button
-        ><a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+        <span>© <span id="year">2026</span> MYFISIO GRECIA</span
+        ><span>ATENCIÓN CON CITA PREVIA</span
+        ><button type="button" data-open-privacy>Privacidad</button
+        ><a href="#inicio">Volver arriba ↑</a>
       </div>
     </footer>
     <dialog class="privacy-dialog" aria-labelledby="privacy-title">
       <div class="dialog-header">
-        <p class="eyebrow">MYFISIO GRECIA</p>
-        <button
-          class="dialog-close"
+        <span class="small-label">MYFISIO GRECIA</span
+        ><button
           type="button"
+          class="dialog-close"
           aria-label="Cerrar privacidad"
         >
           ×
@@ -540,8 +707,8 @@
       <h2 id="privacy-title">Tu privacidad importa.</h2>
       <p>
         Este sitio no incluye formularios de datos personales, cookies de
-        seguimiento ni herramientas de analítica. Los recursos visuales y
-        tipográficos se sirven desde este mismo sitio.
+        seguimiento ni herramientas de analítica. Las imágenes y tipografías se
+        sirven desde este mismo sitio.
       </p>
       <p>
         Los enlaces de contacto te llevan a WhatsApp, Instagram o Google Maps,
@@ -553,7 +720,7 @@
         Para consultas sobre el manejo de tus datos por la clínica, contactá al
         <a href="tel:+50688492736">8849-2736</a>.
       </p>
-      <button class="button dialog-accept" type="button">
+      <button type="button" class="button button-dark dialog-accept">
         Entendido <span aria-hidden="true">↗</span>
       </button>
     </dialog>
