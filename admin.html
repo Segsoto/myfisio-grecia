@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es-CR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#0c2b62" />
+    <title>Panel de citas · Demo MyFisio</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="appointments.css" />
+    <script src="demo-store.js" defer></script>
+    <script src="admin.js" defer></script>
+  </head>
+  <body class="admin-page">
+    <a class="skip-link" href="#admin-content">Saltar al contenido</a>
+    <header class="admin-header">
+      <a class="brand" href="/" aria-label="Volver a MyFisio"
+        ><img
+          class="brand-image"
+          src="assets/myfisio-logo.jpg"
+          width="720"
+          height="720"
+          alt="MyFisio" /></a
+      ><a class="admin-back" href="/#reservar">Volver a reservas</a>
+    </header>
+    <main id="admin-content" class="admin-main">
+      <div class="admin-title">
+        <div>
+          <span class="demo-tag">Demo local</span>
+          <h1>Panel de citas</h1>
+          <p>
+            Las citas se guardan solo en este navegador. Este panel no requiere
+            acceso y no está conectado a la agenda real de la clínica.
+          </p>
+        </div>
+      </div>
+      <div class="admin-toolbar">
+        <p id="admin-count" role="status" aria-live="polite">Cargando citas…</p>
+        <label for="admin-filter"
+          >Mostrar
+          <select id="admin-filter">
+            <option value="all">Todas las citas</option>
+            <option value="pending">Apartadas</option>
+            <option value="confirmed">Confirmadas</option>
+            <option value="cancelled">Canceladas</option>
+          </select></label
+        >
+      </div>
+      <p
+        id="admin-message"
+        class="booking-message"
+        role="status"
+        aria-live="polite"
+        hidden
+      ></p>
+      <div id="admin-empty" class="admin-empty" hidden>
+        <h2>No hay citas para mostrar</h2>
+        <p>Podés crear una cita de ejemplo desde el formulario de reservas.</p>
+        <a class="button button-dark" href="/#reservar">Probar una reserva</a>
+      </div>
+      <ul
+        id="admin-list"
+        class="admin-list"
+        aria-label="Citas de demostración"
+      ></ul>
+      <noscript
+        ><p>
+          Activá JavaScript para ver y administrar las citas de esta demo.
+        </p></noscript
+      >
+    </main>
+  </body>
+</html>

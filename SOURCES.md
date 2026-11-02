@@ -35,3 +35,7 @@ La redacción es una propuesta comercial original. La información de contacto d
 Para el ajuste cromático se inspeccionó la imagen de perfil obtenida de los metadatos públicos de Instagram. Muestras de su degradado: `#06A0E6`, `#0786C9`, `#0967A5`, `#0B508B` y `#0C2B62`. Son muestras de la imagen comprimida, no valores de un manual oficial de marca. La interfaz deriva de ellas sus azules y usa cian claro (`#87D9F5`) y blanco para conservar contraste. El lima se limita al punto de marca.
 
 Se comprueban estructura HTML, recursos locales, enlaces, contraste de la paleta, sintaxis y comportamiento mediante pruebas DOM de código. La revisión visual en navegador no pudo ejecutarse: el permiso de acceso a la web fue rechazado por la política del navegador. No se utilizaron vías alternativas para eludir ese rechazo.
+
+## Agenda de demo
+
+Los horarios, la duración de 60 minutos, los estados de cita y la agenda compartida son datos ficticios implementados únicamente para demostrar el flujo de reserva y administración. No se presentan como disponibilidad oficial del negocio. La demo no se conecta a calendarios ni envía mensajes a la clínica; almacena únicamente datos de prueba en el navegador.

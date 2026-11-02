@@ -11,10 +11,27 @@ Servir esta carpeta con cualquier servidor estático. Por ejemplo, `npx serve .`
 - `index.html`: contenido semántico, metadatos y datos estructurados.
 - `styles.css`: tokens visuales, componentes, responsive y movimiento reducido.
 - `script.js`: navegación móvil, selector accesible de servicios, diálogo de privacidad y zoom fotográfico vinculado al desplazamiento.
+- `demo-store.js`: agenda ficticia, validación de disponibilidad y almacenamiento local compartido entre la reserva y el panel.
+- `booking.js` y `appointments.css`: formulario de reserva y componentes de la demo.
+- `admin.html` y `admin.js`: panel local para confirmar, cancelar y reactivar citas de ejemplo.
 - `assets/`: fotografías, fuente local e identidad vectorial.
 - `vercel.json`: despliegue estático sin compilación.
 
-Los enlaces de WhatsApp abren una conversación con texto preparado; el visitante decide si lo envía. La web no confirma citas ni almacena datos personales. La disponibilidad se coordina directamente con la clínica.
+Los enlaces de WhatsApp abren una conversación con texto preparado; el visitante decide si lo envía. Las reservas creadas en el formulario son simulaciones y no se envían a la clínica. Las citas reales se coordinan directamente con el negocio.
+
+## Agenda de demostración
+
+1. Abrir `/#reservar`, elegir servicio, fecha y hora e ingresar un nombre ficticio.
+2. Apartar la cita. La demo conserva una referencia y bloquea ese horario para todos los servicios.
+3. Abrir `/admin` en el mismo navegador para confirmar o cancelar la cita. Una cancelación libera el horario; reactivar una cita comprueba que siga disponible.
+
+Los datos se guardan en `localStorage` bajo `myfisio.appointments.demo.v1`. Se conservan al recargar y se actualizan entre pestañas del mismo origen y navegador, pero no se comparten entre dispositivos ni usuarios. No existe backend, autenticación, cobro ni envío de notificaciones. El panel es público y está rotulado como demo; usar exclusivamente nombres ficticios.
+
+La agenda propone horarios de ejemplo de lunes a sábado para los próximos 30 días, con citas de 60 minutos y una sola agenda compartida. Estos horarios no representan la disponibilidad real de MyFisio. Todas las comprobaciones de fecha y hora usan `America/Costa_Rica`.
+
+Si el navegador bloquea el almacenamiento o no puede guardar los datos, se muestra el error y no se informa una reserva exitosa. Se requiere JavaScript para utilizar la demo.
+
+Pruebas de la lógica, sin dependencias: `node --test tests/demo-store.test.cjs`.
 
 La interfaz prioriza los nombres de los servicios, la información de la primera consulta y una acción de contacto consistente. No incluye emojis, numeraciones decorativas, sellos, firmas simuladas ni símbolos Unicode como iconos. Los controles de apertura y cierre utilizan formas CSS con nombres accesibles.
 
